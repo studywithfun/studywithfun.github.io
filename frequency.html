@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>趣学</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/app.css">
+
+    <script src="//cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7,vue@2.3.2"></script>
+</head>
+<body>
+<div class="container" id="frequency">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-success">
+                <div class="panel-heading text-nowrap">
+                    <a href="index.html">趣学</a> / <span>词频</span>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <template v-for="pageNumber in pageCount">
+                            <div class="col-xs-4" @click="wordsUrl(pageNumber)" v-html="wordsHtml(pageNumber)"
+                                 :class="wordsClass(pageNumber)">
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $.get("assets/words/frequency.json", function (words) {
+        var vm = new Vue({
+            "el": "#frequency",
+            "data": {
+                "words": words,
+                "pageSize": 4
+            },
+            "computed": {
+                "pageCount": function () {
+                    return Math.ceil(this.words.length / this.pageSize);
+                }
+            },
+            "methods": {
+                "slice": function (pageNumber) {
+                    var start = this.pageSize * (pageNumber - 1);
+                    var end = Math.min(this.words.length, pageNumber * this.pageSize);
+                    return this.words.slice(start, end);
+                },
+                "wordsUrl": function (pageNumber) {
+                    var words = this.slice(pageNumber);
+                    window.location.href = "recall.html?words=" + words.join(",");
+                },
+                "wordsHtml": function (pageNumber) {
+                    var words = this.slice(pageNumber);
+                    var length = Math.min(3, words.length);
+                    var result = words.slice(0, length);
+                    if (result.length < words.length) {
+                        result.push("...");
+                    }
+                    return result.join("<br>");
+                },
+                "wordsClass": function (pageNumber) {
+                    var index = pageNumber % 5;
+                    switch (index) {
+                        case 1:
+                            return {"bg-primary": true};
+                        case 2:
+                            return {"bg-success": true};
+                        case 3:
+                            return {"bg-info": true};
+                        case 4:
+                            return {"bg-warning": true};
+                        default:
+                            return {"bg-danger": true};
+                    }
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
