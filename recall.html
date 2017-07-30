@@ -31,10 +31,10 @@
                                     /{{ word.pronunciation["uk"].phonetic }}/
                                     <span class="glyphicon glyphicon-volume-up"></span><br>
                                     <template v-if="word.definition['cn']">
-                                        <template v-for="(fvalue, fkey) in word.definition['cn']">
-                                            <span class="text-success">{{ fkey }}:</span>
+                                        <div v-for="(fvalue, fkey) in word.definition['cn']">
+                                            <span class="text-success text-nowrap">{{ fkey }}.</span>
                                             <span v-html="fvalue.join('; ')"></span>
-                                        </template>
+                                        </div>
                                     </template>
                                 </td>
                             </tr>
@@ -80,10 +80,10 @@
                         </li>
                         <template v-for="(value, key) in selected.word.definition">
                             <li class="list-group-item" v-if="selected[key]">
-                                <template v-for="(fvalue, fkey) in value">
-                                    <span class="text-success">{{ fkey }}:</span>
+                                <div v-for="(fvalue, fkey) in value">
+                                    <span class="text-success text-nowrap">{{ fkey }}.</span>
                                     <span v-html="fvalue.join('; ')"></span>
-                                </template>
+                                </div>
                             </li>
                         </template>
                     </ul>
