@@ -23,7 +23,7 @@
                 </div>
                 <div class="panel-body">
                     <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
-                        <template v-for="(type, index) in ['primary', 'second']">
+                        <template v-for="(type, index) in ['primary', 'second', 'third']">
                             <div class="panel panel-default" v-if="words[type]">
                                 <div class="panel-heading" role="tab" :id="'heading' + type">
                                     <h4 class="panel-title">
@@ -109,7 +109,8 @@
                 "typeLabel": function (type) {
                     var labels = {
                         "primary": "高频词汇",
-                        "second": "次高频词汇"
+                        "second": "次高频词汇",
+                        "third": "普通词汇"
                     };
                     return labels[type];
                 }

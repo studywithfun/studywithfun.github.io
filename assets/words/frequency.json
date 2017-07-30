@@ -19,5 +19,24 @@
         "rate",
         "control",
         "process"
+    ],
+    "third": [
+        "avoid",
+        "focus",
+        "affect",
+        "credit",
+        "environment",
+        "fail",
+        "feature",
+        "impact",
+        "lack",
+        "major",
+        "nothing",
+        "range",
+        "refer",
+        "replace",
+        "seek",
+        "speed",
+        "suggest"
     ]
 }

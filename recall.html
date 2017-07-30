@@ -24,13 +24,12 @@
                 <template v-if="selected.finish">
                     <div class="panel-body">
                         <table class="table table-striped table-hover">
-                            <tr v-for="word in words">
+                            <tr v-for="word in words" @click="playAudio(word.content, word.pronunciation['uk'].audio)">
                                 <td>
                                     <mark>{{ word.content }}</mark>
                                     <br>
                                     /{{ word.pronunciation["uk"].phonetic }}/
-                                    <span @click="playAudio(word.content, word.pronunciation['uk'].audio)"
-                                          class="glyphicon glyphicon-volume-up"></span><br>
+                                    <span class="glyphicon glyphicon-volume-up"></span><br>
                                     <template v-if="word.definition['cn']">
                                         <div class="row" v-for="(fvalue, fkey) in word.definition['cn']">
                                             <div class="col-xs-1 text-success">
