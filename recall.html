@@ -2,6 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>趣学</title>
@@ -25,13 +27,10 @@
                             <tr v-for="word in words">
                                 <td>
                                     <mark>{{ word.content }}</mark>
-                                </td>
-                                <td>
+                                    <br>
                                     /{{ word.pronunciation["uk"].phonetic }}/
                                     <span @click="playAudio(word.content, word.pronunciation['uk'].audio)"
-                                          class="glyphicon glyphicon-volume-up"></span>
-                                </td>
-                                <td>
+                                          class="glyphicon glyphicon-volume-up"></span><br>
                                     <template v-if="word.definition['cn']">
                                         <div class="row" v-for="(fvalue, fkey) in word.definition['cn']">
                                             <div class="col-xs-1 text-success">
