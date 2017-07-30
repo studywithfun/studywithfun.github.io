@@ -1,25 +1,23 @@
-[
-    "alter",
-    "burst",
-    "dispose",
-    "blast",
-    "consume",
-    "split",
-    "spit",
-    "spill",
-    "slip",
-    "slide",
-    "bacteria",
-    "breed",
-    "budget",
-    "candidate",
-    "campus",
-    "liberal",
-    "transform",
-    "transmit",
-    "transplant",
-    "transport",
-    "shift",
-    "vary",
-    "vanish"
-]
+{
+    "primary": [
+        "consumer",
+        "social",
+        "product",
+        "likely"
+    ],
+    "second": [
+        "tend",
+        "involve",
+        "include",
+        "information",
+        "offer",
+        "level",
+        "require",
+        "issue",
+        "condition",
+        "earn",
+        "rate",
+        "control",
+        "process"
+    ]
+}

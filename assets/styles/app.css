@@ -14,3 +14,7 @@ blockquote {
 .glyphicon {
     font-size: large;
 }
+
+[v-cloak] {
+    display: none;
+}
