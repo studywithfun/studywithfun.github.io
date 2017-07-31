@@ -15,6 +15,12 @@ blockquote {
     font-size: large;
 }
 
+.speech {
+    font-size: 1.2em;
+    white-space: nowrap;
+    color: #3c763d;
+}
+
 [v-cloak] {
     display: none;
 }

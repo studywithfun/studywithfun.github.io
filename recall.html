@@ -32,7 +32,7 @@
                                     <span class="glyphicon glyphicon-volume-up"></span><br>
                                     <template v-if="word.definition['cn']">
                                         <div v-for="(fvalue, fkey) in word.definition['cn']">
-                                            <span class="text-success text-nowrap">{{ fkey }}.</span>
+                                            <span class="speech">{{ fkey }}.</span>
                                             <span v-html="fvalue.join('; ')"></span>
                                         </div>
                                     </template>
@@ -81,7 +81,7 @@
                         <template v-for="(value, key) in selected.word.definition">
                             <li class="list-group-item" v-if="selected[key]">
                                 <div v-for="(fvalue, fkey) in value">
-                                    <span class="text-success text-nowrap">{{ fkey }}.</span>
+                                    <span class="speech">{{ fkey }}.</span>
                                     <span v-html="fvalue.join('; ')"></span>
                                 </div>
                             </li>

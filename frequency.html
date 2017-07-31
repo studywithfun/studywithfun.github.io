@@ -39,10 +39,11 @@
                                      :aria-labelledby="'heading' + type" :class="{in: index == 0}">
                                     <div class="panel-body">
                                         <div class="row">
-                                            <div class="col-xs-4" v-for="pageNumber in pageCount(type)"
-                                                 v-html="wordsHtml(type, pageNumber)"
-                                                 :class="wordsClass(pageNumber)"
-                                                 @click="wordsUrl(type, pageNumber)">
+                                            <div class="col-xs-4" v-for="pageNumber in pageCount(type)">
+                                                <div class="alert" role="alert"
+                                                     v-html="wordsHtml(type, pageNumber)"
+                                                     :class="wordsClass(pageNumber)"
+                                                     @click="wordsUrl(type, pageNumber)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -92,18 +93,16 @@
                     return result.join("<br>");
                 },
                 "wordsClass": function (pageNumber) {
-                    var index = pageNumber % 5;
+                    var index = pageNumber % 4;
                     switch (index) {
                         case 1:
-                            return {"bg-primary": true};
+                            return {"alert-success": true};
                         case 2:
-                            return {"bg-success": true};
+                            return {"alert-info": true};
                         case 3:
-                            return {"bg-info": true};
-                        case 4:
-                            return {"bg-warning": true};
+                            return {"alert-warning": true};
                         default:
-                            return {"bg-danger": true};
+                            return {"alert-danger": true};
                     }
                 },
                 "typeLabel": function (type) {
