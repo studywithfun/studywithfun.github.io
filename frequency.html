@@ -94,17 +94,7 @@
                     return result.join("<br>");
                 },
                 "wordsClass": function (pageNumber) {
-                    var index = pageNumber % 4;
-                    switch (index) {
-                        case 1:
-                            return {"alert-success": true};
-                        case 2:
-                            return {"alert-info": true};
-                        case 3:
-                            return {"alert-warning": true};
-                        default:
-                            return {"alert-danger": true};
-                    }
+                    return {"alert-success": true};
                 },
                 "typeLabel": function (type) {
                     var labels = {

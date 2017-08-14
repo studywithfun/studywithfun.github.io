@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/styles/app.css">
 
     <script src="//cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7,vue@2.3.2"></script>
+    <script src="assets/scripts/app.js"></script>
 </head>
 <body>
 <div class="container" id="recall" v-cloak>
@@ -103,6 +104,8 @@
                         <template v-else>
                             <button type="button" class="btn btn-success" @click="known">详细信息</button>
                         </template>
+                        <span v-text="selected.newWord ? '移出生词本' : '加入生词本'"
+                              :class="selected.newWord ? 'text-danger' : 'text-success'" @click="newWord"></span>
                     </div>
                 </template>
             </div>
@@ -122,7 +125,8 @@
                 "en": false,
                 "cn": false,
                 "full": false,
-                "finish": false
+                "finish": false,
+                "newWord": false
             },
             "wordContents": (function () {
                 var reg = new RegExp("(^|&)words=([^&]*)(&|$)", "i");
@@ -161,7 +165,8 @@
                         "example": false,
                         "en": false,
                         "cn": false,
-                        "full": false
+                        "full": false,
+                        "newWord": NWordList.exist(word.content)
                     });
                     vm.words.push(word);
                 })
@@ -175,7 +180,8 @@
                         "en": false,
                         "cn": false,
                         "full": false,
-                        "finish": true
+                        "finish": true,
+                        "newWord": false
                     });
                     return;
                 }
@@ -211,6 +217,14 @@
                     "src": this.getDataUrl(wordContent, fileName),
                     "autoplay": "autoplay"
                 });
+            },
+            "newWord": function () {
+                if (this.selected.newWord) {
+                    NWordList.remove(this.selected.word.content);
+                } else {
+                    NWordList.add(this.selected.word);
+                }
+                this.selected.newWord = !this.selected.newWord;
             }
         }
     });
