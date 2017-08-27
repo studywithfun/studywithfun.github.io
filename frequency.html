@@ -6,7 +6,7 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>趣学</title>
+    <title>趣学-词频</title>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
@@ -82,7 +82,7 @@
                 },
                 "wordsUrl": function (type, pageNumber) {
                     var words = this.slice(type, pageNumber);
-                    window.location.href = "recall.html?words=" + words.join(",");
+                    window.location.href = "frequency-recall.html?words=" + words.join(",");
                 },
                 "wordsHtml": function (type, pageNumber) {
                     var words = this.slice(type, pageNumber);

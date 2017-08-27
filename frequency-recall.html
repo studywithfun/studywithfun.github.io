@@ -6,7 +6,7 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>趣学</title>
+    <title>趣学-词频</title>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
@@ -15,7 +15,7 @@
     <script src="assets/scripts/app.js"></script>
 </head>
 <body>
-<div class="container" id="recall" v-cloak>
+<div class="container" id="frequency-recall" v-cloak>
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
@@ -116,7 +116,7 @@
 
 <script>
     var vm = new Vue({
-        "el": "#recall",
+        "el": "#frequency-recall",
         "data": {
             "selected": {
                 "index": -1,
