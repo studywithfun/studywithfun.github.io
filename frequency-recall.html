@@ -104,8 +104,9 @@
                         <template v-else>
                             <button type="button" class="btn btn-success" @click="known">详细信息</button>
                         </template>
-                        <span v-text="selected.newWord ? '移出生词本' : '加入生词本'"
-                              :class="selected.newWord ? 'text-danger' : 'text-success'" @click="newWord"></span>
+                        <span class="label"
+                              v-text="selected.newWord ? '移出生词本' : '加入生词本'"
+                              :class="selected.newWord ? 'label-danger' : 'label-success'" @click="newWord"></span>
                     </div>
                 </template>
             </div>

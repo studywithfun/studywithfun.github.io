@@ -14,18 +14,113 @@
     <script src="//cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7,vue@2.3.2"></script>
 </head>
 <body>
-<div class="container" id="listening-recall">
+<div class="container" id="listening-recall" v-cloak>
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
                 <div class="panel-heading text-nowrap">
                     <a href="index.html">趣学</a> / <a href="listening.html">听力</a>
                 </div>
+                <div class="panel-body">
+                    <template v-if="selected.text">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <span class="glyphicon glyphicon-volume-up" v-on:click="playAudio"></span>
+                                    <audio id="audio"></audio>
+                                </div>
+                                <div class="col-xs-2">
+                                    <span class="glyphicon glyphicon-bell" v-on:click="tip"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div v-html="subject"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <script>
+    var vm = new Vue({
+        "el": "#listening-recall",
+        "data": {
+            "selected": {
+                "index": -1,
+                "words": [],
+                "text": "",
+                "translation": ""
+            },
+            "wordContents": (function () {
+                var reg = new RegExp("(^|&)ids=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                return r ? decodeURIComponent(r[2]).split(",") : [];
+            })()
+        },
+        "computed": {
+            "subject": function () {
+                var result = this.selected.text;
+                var words = this.selected.words;
+
+                for (var index in words) {
+                    var word = words[index];
+                    var replace = ["<input type='text' name='listening-subject-item' data='", word, "' size='", word.length, "'>"].join("");
+                    result = result.replace("{" + index + "}", replace);
+                }
+
+                return result;
+            }
+        },
+        "methods": {
+            "hasNext": function () {
+                return this.selected.index < this.wordContents.length - 1;
+            },
+            "next": function () {
+                this.select(this.selected.index + 1);
+            },
+            "select": function (index) {
+                var wordContent = this.wordContents[index];
+                $.get(["assets", "listening", wordContent, wordContent + ".json"].join("/"), function (value) {
+                    $.extend(vm.selected, {
+                        "index": index,
+                        "words": value.words,
+                        "text": value.text,
+                        "translation": value.translation
+                    });
+                });
+            },
+            "tip": function () {
+                if (!!this.selected.text) {
+                    $("input[name='listening-subject-item']").each(function () {
+                        var element = $(this);
+                        element.val(element.attr("data"));
+                    });
+                }
+            },
+            "playAudio": function () {
+                $("#audio").attr({
+                    "src": ["assets", "listening", this.wordContents[this.selected.index], "audio.mp3"].join("/"),
+                    "autoplay": "autoplay"
+                });
+            }
+        }
+    });
+
+    vm.hasNext() && vm.next();
+
+    $(function () {
+        $("input[name='listening-subject-item']").keyup(function (event) {
+            var target = $(event.currentTarget);
+            var answer = target.attr("data");
+            var input = target.val();
+            console.log(["answer:", answer, ",input:", input].join(""));
+        });
+    });
+
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
