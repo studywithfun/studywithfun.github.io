@@ -26,16 +26,32 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-10">
-                                    <span class="glyphicon glyphicon-volume-up" v-on:click="playAudio"></span>
+                                    <span class="glyphicon glyphicon-volume-up" @click="playAudio"></span>
                                     <audio id="audio"></audio>
                                 </div>
                                 <div class="col-xs-2">
-                                    <span class="glyphicon glyphicon-bell" v-on:click="tip"></span>
+                                    <span class="glyphicon glyphicon-bell" @click="tip"></span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div v-html="subject"></div>
+                                    <template v-for="(item, index) in selected.text">
+                                        {{ item }}
+                                        <template v-if="index < selected.answers.length">
+                                            <input name="listening-subject-item" :size="selected.answers[index].length"
+                                                   v-model.trim="selected.result[index]">
+                                        </template>
+                                    </template>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 text-center">
+                                    <template v-if="hasNext()">
+                                        <button type="button" class="btn btn-success" @click="next">下一个</button>
+                                    </template>
+                                    <template v-else>
+                                        <a class="btn btn-success" href="listening.html" role="button">结束</a>
+                                    </template>
                                 </div>
                             </div>
                         </div>
@@ -51,8 +67,9 @@
         "data": {
             "selected": {
                 "index": -1,
-                "words": [],
-                "text": "",
+                "answers": [],
+                "result": [],
+                "text": [],
                 "translation": ""
             },
             "wordContents": (function () {
@@ -61,20 +78,8 @@
                 return r ? decodeURIComponent(r[2]).split(",") : [];
             })()
         },
-        "computed": {
-            "subject": function () {
-                var result = this.selected.text;
-                var words = this.selected.words;
-
-                for (var index in words) {
-                    var word = words[index];
-                    var replace = ["<input type='text' name='listening-subject-item' data='", word, "' size='", word.length, "'>"].join("");
-                    result = result.replace("{" + index + "}", replace);
-                }
-
-                return result;
-            }
-        },
+        "computed": {},
+        "watch": {},
         "methods": {
             "hasNext": function () {
                 return this.selected.index < this.wordContents.length - 1;
@@ -87,7 +92,8 @@
                 $.get(["assets", "listening", wordContent, wordContent + ".json"].join("/"), function (value) {
                     $.extend(vm.selected, {
                         "index": index,
-                        "words": value.words,
+                        "answers": value.answers,
+                        "result": [],
                         "text": value.text,
                         "translation": value.translation
                     });
@@ -95,15 +101,15 @@
             },
             "tip": function () {
                 if (!!this.selected.text) {
-                    $("input[name='listening-subject-item']").each(function () {
-                        var element = $(this);
-                        element.val(element.attr("data"));
+                    $("input[name='listening-subject-item']").each(function (index) {
+                        $(this).val(vm.selected.answers[index]);
                     });
                 }
             },
             "playAudio": function () {
+                var wordContent = this.wordContents[this.selected.index];
                 $("#audio").attr({
-                    "src": ["assets", "listening", this.wordContents[this.selected.index], "audio.mp3"].join("/"),
+                    "src": ["assets", "listening", wordContent, wordContent + ".mp3"].join("/"),
                     "autoplay": "autoplay"
                 });
             }
@@ -111,15 +117,6 @@
     });
 
     vm.hasNext() && vm.next();
-
-    $(function () {
-        $("input[name='listening-subject-item']").keyup(function (event) {
-            var target = $(event.currentTarget);
-            var answer = target.attr("data");
-            var input = target.val();
-            console.log(["answer:", answer, ",input:", input].join(""));
-        });
-    });
 
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;

@@ -1,6 +1,9 @@
 {
-    "text": "The reduced {0} demand is also affecting company {1}.",
-    "words": [
+    "text": [
+        "The reduced",
+        "demand is also affecting company"
+    ],
+    "answers": [
         "consumer",
         "profits"
     ],
