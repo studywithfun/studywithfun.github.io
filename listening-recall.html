@@ -35,22 +35,37 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <template v-for="(item, index) in selected.text">
-                                        {{ item }}
-                                        <template v-if="index < selected.answers.length">
-                                            <input name="listening-subject-item" :size="selected.answers[index].length"
-                                                   v-model.trim="selected.result[index]">
-                                        </template>
-                                    </template>
+                                    <form class="form-inline">
+                                        <blockquote>
+                                            <p>
+
+                                                <template v-for="(item, index) in selected.text">
+                                                    {{ item }}
+                                                    <template v-if="index < selected.answers.length">
+                                                        <div class="form-group">
+                                                            <input name="listening-subject-item"
+                                                                   :size="selected.answers[index].length"
+                                                                   v-model.trim="selected.result[index]">
+                                                        </div>
+                                                    </template>
+                                                </template>
+
+                                            </p>
+                                            <footer v-if="selected.tipTranslation">{{ selected.translation }}</footer>
+                                        </blockquote>
+                                    </form>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 text-center">
                                     <template v-if="hasNext()">
-                                        <button type="button" class="btn btn-success" @click="next">下一个</button>
+                                        <button type="button" class="btn btn-success" @click="next"
+                                                v-bind:disabled="!isRight">下一个
+                                        </button>
                                     </template>
                                     <template v-else>
-                                        <a class="btn btn-success" href="listening.html" role="button">结束</a>
+                                        <a class="btn btn-success" href="listening.html" role="button"
+                                           v-bind:disabled="!isRight">结束</a>
                                     </template>
                                 </div>
                             </div>
@@ -70,7 +85,8 @@
                 "answers": [],
                 "result": [],
                 "text": [],
-                "translation": ""
+                "translation": "",
+                "tipTranslation": false
             },
             "wordContents": (function () {
                 var reg = new RegExp("(^|&)ids=([^&]*)(&|$)", "i");
@@ -78,7 +94,19 @@
                 return r ? decodeURIComponent(r[2]).split(",") : [];
             })()
         },
-        "computed": {},
+        "computed": {
+            "isRight": function () {
+                for (var index in this.selected.answers) {
+                    var answer = this.selected.answers[index];
+                    var result = this.selected.result[index];
+                    if (answer && result && (answer.toLocaleLowerCase() === result.toLocaleLowerCase())) {
+                        continue;
+                    }
+                    return false;
+                }
+                return true;
+            }
+        },
         "watch": {},
         "methods": {
             "hasNext": function () {
@@ -95,15 +123,29 @@
                         "answers": value.answers,
                         "result": [],
                         "text": value.text,
-                        "translation": value.translation
+                        "translation": value.translation,
+                        "tipTranslation": false
                     });
                 });
             },
             "tip": function () {
                 if (!!this.selected.text) {
+                    if (!this.selected.tipTranslation) {
+                        this.selected.tipTranslation = true;
+                        return;
+                    }
+
                     $("input[name='listening-subject-item']").each(function (index) {
-                        $(this).val(vm.selected.answers[index]);
+                        var answer = vm.selected.answers[index];
+                        $(this).val(answer);
                     });
+
+                    window.setTimeout(function () {
+                        $("input[name='listening-subject-item']").each(function (index) {
+                            var result = vm.selected.result[index];
+                            $(this).val(result);
+                        });
+                    }, 5000);
                 }
             },
             "playAudio": function () {

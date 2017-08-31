@@ -14,7 +14,7 @@
     <script src="//cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7,vue@2.3.2"></script>
 </head>
 <body>
-<div class="container" id="listening">
+<div class="container" id="listening" v-cloak>
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
@@ -22,14 +22,47 @@
                     <a href="index.html">趣学</a> / 听力
                 </div>
                 <div class="panel-body">
-                    <a href="listening-recall.html?ids=consumer,social" class="btn btn-success btn-lg"
-                       role="button">高频</a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" v-for="pageNumber in pageCount()">
+                                <a role="button" class="btn btn-success btn-lg" :href="wordsUrl(pageNumber)">第{{pageNumber}}组</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script>
+    $.get("assets/listening/listening.json", function (listenings) {
+        var vm = new Vue({
+            "el": "#listening",
+            "data": {
+                "listenings": listenings,
+                "pageSize": 5
+            },
+            "methods": {
+                "recordCount": function () {
+                    return this.listenings ? this.listenings.length : 0;
+                },
+                "pageCount": function () {
+                    return Math.ceil(this.recordCount() / this.pageSize);
+                },
+                "slice": function (pageNumber) {
+                    var recordCount = this.recordCount();
+                    var start = Math.min(this.pageSize * (pageNumber - 1), recordCount);
+                    var end = Math.min(pageNumber * this.pageSize, recordCount);
+                    return this.listenings.slice(start, end);
+                },
+                "wordsUrl": function (pageNumber) {
+                    var words = this.slice(pageNumber);
+                    return "listening-recall.html?ids=" + words.join(",");
+                }
+            }
+        });
+    });
+
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
