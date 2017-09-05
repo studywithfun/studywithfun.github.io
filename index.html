@@ -17,8 +17,8 @@
     <script src="https://cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7,vue@2.3.2"></script>
 </head>
 <body>
-<div>
-    <div class="container" id="home" v-cloak>
+<div id="home" v-cloak>
+    <div class="container">
         <div class="row">
             <template v-for="item in icons">
                 <div class="col-xs-3">
@@ -35,7 +35,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <img src="assets/images/home.jpg" class="img-responsive img-rounded center-block icon" alt="首页">
+                    <a href="index.html">
+                        <img class="img-responsive img-rounded center-block icon"
+                             src="assets/images/icon-home.jpg" alt="首页">
+                    </a>
                 </div>
             </div>
         </div>
