@@ -41,9 +41,8 @@
                                         <div class="row">
                                             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2"
                                                  v-for="pageNumber in pageCount(type)">
-                                                <div class="alert" role="alert"
+                                                <div class="alert alert-success" role="alert"
                                                      v-html="wordsHtml(type, pageNumber)"
-                                                     :class="wordsClass(pageNumber)"
                                                      @click="wordsUrl(type, pageNumber)"></div>
                                             </div>
                                         </div>
@@ -92,9 +91,6 @@
                         result.push("...");
                     }
                     return result.join("<br>");
-                },
-                "wordsClass": function (pageNumber) {
-                    return {"alert-success": true};
                 },
                 "typeLabel": function (type) {
                     var labels = {

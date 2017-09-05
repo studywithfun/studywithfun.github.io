@@ -24,3 +24,8 @@ blockquote {
 [v-cloak] {
     display: none;
 }
+
+img.icon {
+    height: 48px;
+    width: auto;
+}

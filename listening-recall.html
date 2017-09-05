@@ -22,7 +22,7 @@
                     <a href="index.html">趣学</a> / <a href="listening.html">听力</a>
                 </div>
                 <div class="panel-body">
-                    <template v-if="selected.text">
+                    <template v-if="text">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-10">
@@ -39,19 +39,19 @@
                                         <blockquote>
                                             <p>
 
-                                                <template v-for="(item, index) in selected.text">
+                                                <template v-for="(item, index) in text">
                                                     {{ item }}
-                                                    <template v-if="index < selected.answers.length">
-                                                        <div class="form-group">
-                                                            <input name="listening-subject-item"
-                                                                   :size="selected.answers[index].length"
-                                                                   v-model.trim="selected.result[index]">
+                                                    <template v-if="index < answers.length">
+                                                        <div class="form-group" name="subject-div">
+                                                            <input name="subject-input" class="form-control"
+                                                                   :size="answers[index].length - 2"
+                                                                   v-model.trim="results[index]">
                                                         </div>
                                                     </template>
                                                 </template>
 
                                             </p>
-                                            <footer v-if="selected.tipTranslation">{{ selected.translation }}</footer>
+                                            <footer v-if="tipTranslation">{{ translation }}</footer>
                                         </blockquote>
                                     </form>
                                 </div>
@@ -59,13 +59,11 @@
                             <div class="row">
                                 <div class="col-xs-12 text-center">
                                     <template v-if="hasNext()">
-                                        <button type="button" class="btn btn-success" @click="next"
-                                                v-bind:disabled="!isRight">下一个
+                                        <button type="button" class="btn btn-success" @click="next">下一个
                                         </button>
                                     </template>
                                     <template v-else>
-                                        <a class="btn btn-success" href="listening.html" role="button"
-                                           v-bind:disabled="!isRight">结束</a>
+                                        <a class="btn btn-success" href="listening.html" role="button">结束</a>
                                     </template>
                                 </div>
                             </div>
@@ -77,79 +75,88 @@
     </div>
 </div>
 <script>
+    var ids = (function () {
+        var reg = new RegExp("(^|&)ids=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        return r ? decodeURIComponent(r[2]).split(",") : [];
+    })();
+
     var vm = new Vue({
         "el": "#listening-recall",
         "data": {
-            "selected": {
-                "index": -1,
-                "answers": [],
-                "result": [],
-                "text": [],
-                "translation": "",
-                "tipTranslation": false
-            },
-            "wordContents": (function () {
-                var reg = new RegExp("(^|&)ids=([^&]*)(&|$)", "i");
-                var r = window.location.search.substr(1).match(reg);
-                return r ? decodeURIComponent(r[2]).split(",") : [];
-            })()
+            "index": -1,
+            "answers": [],
+            "results": [],
+            "text": [],
+            "translation": "",
+            "tipTranslation": false
         },
-        "computed": {
-            "isRight": function () {
-                for (var index in this.selected.answers) {
-                    var answer = this.selected.answers[index];
-                    var result = this.selected.result[index];
-                    if (answer && result && (answer.toLocaleLowerCase() === result.toLocaleLowerCase())) {
-                        continue;
+        "watch": {
+            "results": function () {
+                for (var index in this.answers) {
+                    var answer = this.answers[index];
+                    var result = this.results[index];
+
+                    if (answer && result) {
+                        var divElement = $("div[name='subject-div']").get(index);
+                        var inputElement = $("input[name='subject-input']").get(index);
+
+                        var answerText = answer.toLocaleLowerCase();
+                        var resultText = result.toLocaleLowerCase();
+
+                        if (answerText.indexOf(resultText) == 0) {
+                            $(divElement).removeClass("has-error").addClass("has-success");
+                        } else {
+                            $(divElement).removeClass("has-success").addClass("has-error");
+                        }
+
+                        if (answerText === resultText) {
+                            $(inputElement).attr("readonly", true);
+                        }
                     }
-                    return false;
                 }
-                return true;
             }
         },
-        "watch": {},
         "methods": {
             "hasNext": function () {
-                return this.selected.index < this.wordContents.length - 1;
+                return this.index < ids.length - 1;
             },
             "next": function () {
-                this.select(this.selected.index + 1);
+                this.select(this.index + 1);
             },
             "select": function (index) {
-                var wordContent = this.wordContents[index];
+                var wordContent = ids[index];
                 $.get(["assets", "listening", wordContent, wordContent + ".json"].join("/"), function (value) {
-                    $.extend(vm.selected, {
-                        "index": index,
-                        "answers": value.answers,
-                        "result": [],
-                        "text": value.text,
-                        "translation": value.translation,
-                        "tipTranslation": false
-                    });
+                    vm.index = index;
+                    vm.answers = value.answers;
+                    vm.results = [];
+                    vm.text = value.text;
+                    vm.translation = value.translation;
+                    vm.tipTranslation = false;
                 });
             },
             "tip": function () {
-                if (!!this.selected.text) {
-                    if (!this.selected.tipTranslation) {
-                        this.selected.tipTranslation = true;
+                if (!!this.text) {
+                    if (!this.tipTranslation) {
+                        this.tipTranslation = true;
                         return;
                     }
 
-                    $("input[name='listening-subject-item']").each(function (index) {
-                        var answer = vm.selected.answers[index];
+                    $("input[name='subject-input']").each(function (index) {
+                        var answer = vm.answers[index];
                         $(this).val(answer);
                     });
 
                     window.setTimeout(function () {
-                        $("input[name='listening-subject-item']").each(function (index) {
-                            var result = vm.selected.result[index];
-                            $(this).val(result);
+                        $("input[name='subject-input']").each(function (index) {
+                            var results = vm.results[index];
+                            $(this).val(results);
                         });
-                    }, 5000);
+                    }, 1000 * this.answers.length);
                 }
             },
             "playAudio": function () {
-                var wordContent = this.wordContents[this.selected.index];
+                var wordContent = ids[this.index];
                 $("#audio").attr({
                     "src": ["assets", "listening", wordContent, wordContent + ".mp3"].join("/"),
                     "autoplay": "autoplay"
