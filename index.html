@@ -14,15 +14,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
 
+    <style>
+        body {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+    </style>
+
     <script src="https://cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7,vue@2.3.2"></script>
 </head>
 <body>
 <div id="home" v-cloak>
+    <nav class="navbar navbar-default navbar-fixed-top nav-swf">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-center">趣 学</p>
+                </div>
+            </div>
+    </nav>
     <div class="container">
         <div class="row">
             <template v-for="item in icons">
                 <div class="col-xs-3">
-                    <a class="thumbnail" :href="item.url" :title="item.caption">
+                    <a class="thumbnail" :href="item.url" :title="item.caption" style="border: 0px">
                         <img class="img-responsive img-rounded center-block icon" :src="item.image"
                              :alt="item.caption">
                         <div class="caption text-center">{{ item.caption }}</div>
@@ -31,7 +46,7 @@
             </template>
         </div>
     </div>
-    <nav class="navbar navbar-default navbar-fixed-bottom">
+    <nav class="navbar navbar-default navbar-fixed-bottom nav-swf">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
