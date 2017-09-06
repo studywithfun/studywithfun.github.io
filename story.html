@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="google-site-verification" content="zCzbSvo1JUlhVXzvoGvgNVv8lR4VuV5TE-V7rDaiZE8">
 
-    <title>趣学</title>
+    <title>趣学-故事</title>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
@@ -17,12 +17,12 @@
         src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
 </head>
 <body>
-<div id="home" v-cloak>
+<div id="story" v-cloak>
     <nav class="navbar navbar-default navbar-fixed-top nav-swf">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <p class="text-center">学 习</p>
+                    <p class="text-center">故 事</p>
                 </div>
             </div>
         </div>
@@ -30,26 +30,22 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <template v-for="(item, index) in stories">
+                            <li data-target="#carousel-example-generic" data-slide-to="{{ index }}"
+                                v-bind:class="{active: index == 0}"></li>
+                        </template>
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="assets/images/slide-1.jpg" alt="Nothing is possible!">
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/slide-2.jpg" alt="You have to aim high.">
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/slide-3.jpg" alt="Whatever is worth doing is worth doing well.">
-                        </div>
+                        <template v-for="(item, index) in stories">
+                            <div class="item" v-bind:class="{active: index == 0}">
+                                <img :src="item.image" alt="item.title">
+                            </div>
+                        </template>
                     </div>
 
                     <!-- Controls -->
@@ -62,19 +58,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-
             </div>
-        </div>
-        <div class="row">
-            <template v-for="item in icons">
-                <div class="col-xs-3">
-                    <a class="thumbnail" :href="item.url" :title="item.caption" style="border: 0px">
-                        <img class="img-responsive img-rounded center-block icon" :src="item.image"
-                             :alt="item.caption">
-                        <div class="caption text-center">{{ item.caption }}</div>
-                    </a>
-                </div>
-            </template>
         </div>
     </div>
     <nav class="navbar navbar-default navbar-fixed-bottom nav-swf">
@@ -104,67 +88,52 @@
 </div>
 <script>
     var vm = new Vue({
-        "el": "#home",
+        "el": "#story",
         "data": {
-            "icons": [
+            "stories": [
                 {
-                    "url": "404.html",
-                    "image": "assets/images/icon-listening.jpg",
-                    "caption": "听"
+                    "image": "assets/images/story-deep.jpg",
+                    "title": "DEEP DARK FEARS"
                 },
                 {
-                    "url": "404.html",
-                    "image": "assets/images/icon-speaking.jpg",
-                    "caption": "说"
+                    "image": "assets/images/story-drink.jpg",
+                    "title": "DRINK"
                 },
                 {
-                    "url": "404.html",
-                    "image": "assets/images/icon-reading.jpg",
-                    "caption": "读"
+                    "image": "assets/images/story-knives.jpg",
+                    "title": "刀的恐惧"
                 },
                 {
-                    "url": "404.html",
-                    "image": "assets/images/icon-writing.jpg",
-                    "caption": "写"
+                    "image": "assets/images/story-skating.jpg",
+                    "title": "滑冰"
                 },
                 {
-                    "url": "frequency.html",
-                    "image": "assets/images/icon-frequency.jpg",
-                    "caption": "高频"
+                    "image": "assets/images/story-girl-1.jpg",
+                    "title": "卡在墙上的女孩（1）"
                 },
                 {
-                    "url": "404.html",
-                    "image": "assets/images/icon-scene.jpg",
-                    "caption": "场景"
+                    "image": "assets/images/story-girl-2.jpg",
+                    "title": "卡在墙上的女孩（2）"
                 },
                 {
-                    "url": "404.html",
-                    "image": "assets/images/icon-story.jpg",
-                    "caption": "故事"
+                    "image": "assets/images/story-dark.jpg",
+                    "title": "摸黑"
                 },
                 {
-                    "url": "404.html",
-                    "image": "assets/images/icon-song.jpg",
-                    "caption": "儿歌"
+                    "image": "assets/images/story-cut.jpg",
+                    "title": "手伤"
+                },
+                {
+                    "image": "assets/images/story-headache.jpg",
+                    "title": "头疼"
+                },
+                {
+                    "image": "assets/images/story-shoe.jpg",
+                    "title": "鞋子"
                 }
             ]
         }
     });
-
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-103657912-1', 'auto');
-    ga('send', 'pageview');
 </script>
 </body>
 </html>
