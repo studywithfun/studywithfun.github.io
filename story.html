@@ -12,20 +12,10 @@
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
-    <script
-        src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
 </head>
 <body>
 <div id="story" v-cloak>
-    <nav class="navbar navbar-default navbar-fixed-top nav-swf">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p class="text-center">故 事</p>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <navbar-top title="故 事"></navbar-top>
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -57,79 +47,26 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-default navbar-fixed-bottom nav-swf">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6">
-                    <a href="index.html">
-                        <img class="img-responsive img-rounded center-block icon"
-                             src="assets/images/icon-study.jpg" alt="学习">
-                    </a>
-                </div>
-                <div class="col-xs-6">
-                    <a href="index.html">
-                        <img class="img-responsive img-rounded center-block icon"
-                             src="assets/images/icon-profile.jpg" alt="个人中心">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <navbar-bottom></navbar-bottom>
 </div>
+<script
+    src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
+<script src="assets/scripts/app.js"></script>
 <script>
-    var vm = new Vue({
-        "el": "#story",
-        "data": {
-            "stories": [
-                {
-                    "image": "assets/images/story-deep.jpg",
-                    "title": "DEEP DARK FEARS"
-                },
-                {
-                    "image": "assets/images/story-drink.jpg",
-                    "title": "DRINK"
-                },
-                {
-                    "image": "assets/images/story-knives.jpg",
-                    "title": "刀的恐惧"
-                },
-                {
-                    "image": "assets/images/story-skating.jpg",
-                    "title": "滑冰"
-                },
-                {
-                    "image": "assets/images/story-girl-1.jpg",
-                    "title": "卡在墙上的女孩（1）"
-                },
-                {
-                    "image": "assets/images/story-girl-2.jpg",
-                    "title": "卡在墙上的女孩（2）"
-                },
-                {
-                    "image": "assets/images/story-dark.jpg",
-                    "title": "摸黑"
-                },
-                {
-                    "image": "assets/images/story-cut.jpg",
-                    "title": "手伤"
-                },
-                {
-                    "image": "assets/images/story-headache.jpg",
-                    "title": "头疼"
-                },
-                {
-                    "image": "assets/images/story-shoe.jpg",
-                    "title": "鞋子"
-                }
-            ]
-        }
-    });
-
-    (function () {
-        $('.carousel').carousel({
-            "interval": 600 * 1000
+    $.get("assets/stories/stories.json", function (stories) {
+        var vm = new Vue({
+            "el": "#story",
+            "data": {
+                "stories": stories
+            }
         });
-    })();
+
+        (function () {
+            $('.carousel').carousel({
+                "interval": 600 * 1000
+            });
+        })();
+    });
 
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;

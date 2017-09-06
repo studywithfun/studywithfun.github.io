@@ -1,0 +1,42 @@
+[
+    {
+        "image": "assets/stories/deep.jpg",
+        "title": "DEEP DARK FEARS"
+    },
+    {
+        "image": "assets/stories/drink.jpg",
+        "title": "DRINK"
+    },
+    {
+        "image": "assets/stories/knives.jpg",
+        "title": "刀的恐惧"
+    },
+    {
+        "image": "assets/stories/skating.jpg",
+        "title": "滑冰"
+    },
+    {
+        "image": "assets/stories/girl-1.jpg",
+        "title": "卡在墙上的女孩（1）"
+    },
+    {
+        "image": "assets/stories/girl-2.jpg",
+        "title": "卡在墙上的女孩（2）"
+    },
+    {
+        "image": "assets/stories/dark.jpg",
+        "title": "摸黑"
+    },
+    {
+        "image": "assets/stories/cut.jpg",
+        "title": "手伤"
+    },
+    {
+        "image": "assets/stories/headache.jpg",
+        "title": "头疼"
+    },
+    {
+        "image": "assets/stories/shoe.jpg",
+        "title": "鞋子"
+    }
+]
