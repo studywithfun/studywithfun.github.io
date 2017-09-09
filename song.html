@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="趣学">
+    <meta name="description" content="">
+
+    <title>趣学-儿歌学英语</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/app.css">
+</head>
+<body>
+<div id="song" v-cloak>
+    <navbar-top title="儿 歌"></navbar-top>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <template v-for="(item, index) in songs">
+                            <li data-target="#carousel-example-generic" :data-slide-to="index"
+                                v-bind:class="{active: index == 0}"></li>
+                        </template>
+                    </ol>
+
+                    <div class="carousel-inner" role="listbox">
+                        <template v-for="(item, index) in songs">
+                            <div class="item" v-bind:class="{active: index == 0}">
+                                <h3 class="song">{{ item.caption }}</h3>
+                                <pre class="song">{{ item.content }}</pre>
+                            </div>
+                        </template>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <navbar-bottom></navbar-bottom>
+</div>
+
+<script
+    src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
+<script src="assets/scripts/app.js"></script>
+<script>
+    var vm = new Vue({
+        "el": "#song",
+        "data": {
+            "songs": [
+                {
+                    "caption": "小侄子",
+                    "content": "我有个小nephew(侄子)\n" +
+                    "穿着衣服new(新的)\n" +
+                    "嘴里把肉chew(嚼)\n" +
+                    "眼睛把糖view(看)\n"
+                },
+                {
+                    "caption": "老鼠的恶性",
+                    "content": "几只小小mice（老鼠）\n" +
+                    "偷吃面包slice（片)\n" +
+                    "晚餐虽已suffice(足够)\n" +
+                    "行为却是vice(恶性)\n"
+                },
+                {
+                    "caption": "大话西游",
+                    "content": "唐僧整天瞎grope(摸索)\n" +
+                    "爬上最后的slope(斜坡)\n" +
+                    "居然来到了Europe(欧洲)\n" +
+                    "不见佛祖拜Pope(罗马教皇)\n" +
+                    "\n" +
+                    "那是西游的scope（范围)\n" +
+                    "辞职信装进envelope(信封)\n" +
+                    "老孙要新的hope(希望)\n" +
+                    "还你箍头的rope(绳子)\n" +
+                    "有麻烦自己cope(应付)\n"
+                },
+                {
+                    "caption": "盗版生涯",
+                    "content": "贩卖盗版disk(光盘)\n" +
+                    "\n" +
+                    "工作不用desk(办公桌)\n" +
+                    "自己戴上mask(面具)\n" +
+                    "怕被熟人ask(问)\n" +
+                    "兜售总在dusk(黄昏)\n" +
+                    "生意不太brisk(兴隆的)\n" +
+                    "勉强完成task(任务)\n" +
+                    "生存充满risk（风险）\n"
+                },
+                {
+                    "caption": "跑龙套",
+                    "content": "因为出身humble(卑微的)\n" +
+                    "性命拿来gamble(冒险)\n" +
+                    "身上系条cable(缆绳)\n" +
+                    "摔下砸坏table(桌子)\n" +
+                    "钱少只买vegetable(蔬菜)\n" +
+                    "工作何时stable(稳定的)\n" +
+                    "能让生活comfortable(舒服的)\n"
+                },
+                {
+                    "caption": "蹩脚算命佬",
+                    "content": "一队迷信的couple(夫妇)\n" +
+                    "身穿衣服purple(紫色的)\n" +
+                    "逢初一去temple(庙宇)\n" +
+                    "算命佬是cripple(跛子)\n" +
+                    "庙外摆摊simple(简单的）\n" +
+                    "来问卦的people(人们)\n" +
+                    "篮里装着staple(主食)\n" +
+                    "他瞎说是apple(苹果)\n"
+                },
+                {
+                    "caption": "大圣报恩",
+                    "content": "观音留下note(便条)\n" +
+                    "天庭在搞vote(选举)\n" +
+                    "善举需要quote(引证)\n" +
+                    "取经之地remote(遥远的)\n" +
+                    "定要老孙devote(奉献)\n" +
+                    "赶去道出anecdote(轶事)\n"
+                },
+                {
+                    "caption": "阿飞的白日梦",
+                    "content": "幻想乘坐rocket(火箭)\n" +
+                    "飞向遥远planet(行星)\n" +
+                    "费用无从budget(预算)\n" +
+                    "苦闷难以interpret(说明)\n" +
+                    "恍惚走进cabinet(贮藏柜)\n" +
+                    "拿出一个racket(球拍)\n" +
+                    "上面印着alphabet(字母表)\n" +
+                    "挥拍把行星打成comet(彗星)\n"
+                },
+                {
+                    "caption": "敬业的米开朗琪罗",
+                    "content": "加急订单receive(收到)\n" +
+                    "小米连夜carve(雕刻)\n" +
+                    "模特快要starve(饿死)\n" +
+                    "身体向前curve(弯曲)\n" +
+                    "速把面包give(给予)\n" +
+                    "希望她能forgive(原谅)\n"
+                },
+                {
+                    "caption": "天庭扰民",
+                    "content": "选定了下凡candidate(候选人)\n" +
+                    "天庭就准备celebrate(庆祝)\n" +
+                    "玉帝的马车accelerate(加速)\n" +
+                    "声响把大地vibrate(震动)\n" +
+                    "光电在天上generate(产生)\n" +
+                    "吓坏人间的magistrate(地方官员)\n"
+                },
+                {
+                    "caption": "刚果战乱",
+                    "content": "刚果在闹famine(饥荒)\n" +
+                    "军队没有discipline(纪律)\n" +
+                    "为能发动engine(引擎)\n" +
+                    "到处抢劫gasoline(汽油)\n" +
+                    "暗杀没人examine(调查)\n" +
+                    "这世界是masculine(男性的)\n" +
+                    "上哪找朵jasmine(茉莉花)\n"
+                },
+                {
+                    "caption": "祝英台的心愿",
+                    "content": "梁兄是我的classmate(同班同学)\n" +
+                    "平日与我intimate（亲密的）\n" +
+                    "对我十分considerate(体贴的）\n" +
+                    "梦想成为他的mate(配偶)\n" +
+                    "可在离别的date(日子)\n" +
+                    "傻样把我irritate(激怒)\n" +
+                    "未成心愿ultimate(最终的)\n" +
+                    "只能说This is fate命运！\n"
+                },
+                {
+                    "caption": "黛玉的梦魇",
+                    "content": "宝玉的心思的swing(摇摆)\n" +
+                    "贴着宝钗cling(依偎)\n" +
+                    "高声朗诵saying(格言)\n" +
+                    "那心痛的feeling（感觉）\n" +
+                    "像被黄蜂sting(叮)\n" +
+                    "真想失去hearing(听觉)\n"
+                },
+                {
+                    "caption": "令狐冲",
+                    "content": "因把师命violate(违反)\n" +
+                    "被罚与世isolate(隔离)\n" +
+                    "五岳剑法simulate(模拟)\n" +
+                    "武功因此stimulate(促进)\n"
+                },
+                {
+                    "caption": "懒女人",
+                    "content": "有个漂亮的mistress(女主人)\n" +
+                    "注重仪容dress(服装)\n" +
+                    "成天爱玩chess(国际象棋)\n" +
+                    "家里一团mess(混乱)\n" +
+                    "丈夫不堪distress(痛苦)\n" +
+                    "求神把婚姻bless(保佑)\n"
+                },
+                {
+                    "caption": "《哈里波特》引进计划",
+                    "content": "苦思冥想overnight(在整个夜里)\n" +
+                    "定好计划watertight(周密的)\n" +
+                    "英国公干fortnight(两星期)\n" +
+                    "洽购哈利copyright(版权）\n" +
+                    "天气影响flight(航班)\n" +
+                    "行程变动slight(略微的)\n"
+                },
+                {
+                    "caption": "败家女的生活",
+                    "content": "天生就很lazy(懒惰的)\n" +
+                    "生活就爱cozy(舒适的)\n" +
+                    "上街血拼crazy(疯狂的)\n" +
+                    "体胖心感uneasy(不安的)\n" +
+                    "减肥虚脱dizzy(头昏眼花的)\n" +
+                    "成天沉溺fantasy(幻想)\n" +
+                    "做起事来clumsy(笨手笨脚)\n"
+                }
+            ]
+        }
+    });
+
+    (function () {
+        $('.carousel').carousel({
+            "interval": 600 * 1000
+        });
+    })();
+
+    (function () {
+        $('.carousel').carousel({
+            "interval": 600 * 1000
+        });
+    })();
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-103657912-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+</html>
