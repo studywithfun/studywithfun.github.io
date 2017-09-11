@@ -17,6 +17,64 @@
 
 <div id="read-detail" v-cloak>
     <navbar-top :title="title"></navbar-top>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                         style="min-width: 2em;" v-bind:style="{width: percentage + '%'}">
+                        {{ index + 1 }} / {{ length }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <template v-if="word">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="word-content">{{ word.content }}</p>
+                    <p>
+                        <template v-if="word.pronunciation && word.pronunciation.uk">
+                            <span class="word-pronunciation-type">英</span>
+                            <span class="word-pronunciation-phonetic">[{{ word.pronunciation.uk.phonetic }}]</span>
+                        </template>
+                        <template v-if="word.pronunciation && word.pronunciation.us">
+                            <span class="word-pronunciation-type">美</span>
+                            <span class="word-pronunciation-phonetic">[{{ word.pronunciation.us.phonetic }}]</span>
+                        </template>
+                    </p>
+                    <template v-if="word.definition && word.definition.cn">
+                        <p>
+                            <template v-for="(value, key) in word.definition.cn">
+                                <span class="word-definition-type">{{ key }}.</span>
+                                <span class="word-definition-content">{{ value.join(';') }}</span><br>
+                            </template>
+                        </p>
+                    </template>
+                    <template v-if="word.examples">
+                        <blockquote v-for="item in word.examples" class="word-example">
+                            <p>{{ item.first }}<em>
+                                <ins>{{ word.content }}</ins>
+                            </em>{{ item.last }}
+                            </p>
+                            <footer>{{ item.translation }}</footer>
+                        </blockquote>
+                    </template>
+                </div>
+            </div>
+        </template>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <template v-if="hasNext">
+                        <button type="button" class="btn btn-success" @click="next">继续</button>
+                    </template>
+                    <template v-else>
+                        <button type="button" class="btn btn-success" @click="window.history.back();">结束</button>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
     <navbar-bottom></navbar-bottom>
 </div>
 <script
@@ -44,9 +102,32 @@
             "el": "#read-detail",
             "data": {
                 "title": ['读', category].join('-'),
-                "words": words
+                "words": words,
+                "index": -1,
+                "word": null
+            },
+            "computed": {
+                "length": function () {
+                    return this.words.length;
+                },
+                "hasNext": function () {
+                    return this.index < this.words.length - 1;
+                },
+                "percentage": function () {
+                    return (100 * (this.index + 1) / this.words.length).toFixed();
+                }
+            },
+            "methods": {
+                "next": function () {
+                    this.index = this.index + 1;
+                    var wordContent = this.words[this.index];
+                    $.get(getWordUrl(wordContent), function (word) {
+                        vm.word = word;
+                    });
+                }
             }
         });
+        vm.hasNext && vm.next();
     });
 
     (function (i, s, o, g, r, a, m) {
