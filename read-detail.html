@@ -15,9 +15,8 @@
 </head>
 <body>
 
-<div id="read" v-cloak>
-    <navbar-top title="读"></navbar-top>
-    <words-category :items="items"></words-category>
+<div id="read-detail" v-cloak>
+    <navbar-top :title="title"></navbar-top>
     <navbar-bottom></navbar-bottom>
 </div>
 <script
@@ -25,14 +24,27 @@
 <script src="assets/scripts/app.js"></script>
 <script>
     $.get("assets/words/read.json", function (items) {
-        window.linkTo = function (item) {
-            window.location.href = "read-detail.html?category=" + encodeURIComponent(item.category);
-        };
+        var category = getParameter("category");
+        var words = (function (items, category) {
+            for (var index in items) {
+                var item = items[index];
+                if (item.category == category) {
+                    return item.words;
+                }
+            }
+            return [];
+        })(items, category);
+
+        if (words.length == 0) {
+            window.location.assign("404.html");
+            return;
+        }
 
         var vm = new Vue({
-            "el": "#read",
+            "el": "#read-detail",
             "data": {
-                "items": items
+                "title": ['读', category].join('-'),
+                "words": words
             }
         });
     });
