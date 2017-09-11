@@ -45,6 +45,9 @@
     window.getWordUrl = function (wordContent) {
         return ["assets", "words", wordContent.substring(0, 1), wordContent, wordContent + ".json"].join("/");
     };
+    window.getPhoneticAudioUrl = function (wordContent, audioFile) {
+        return ["assets", "words", wordContent.substring(0, 1), wordContent, audioFile].join("/");
+    };
 
     Vue.component('navbar-top', {
         'template': '<nav class="navbar navbar-default navbar-fixed-top nav-swf"><p class="text-center">{{ title }}</p></nav>',
