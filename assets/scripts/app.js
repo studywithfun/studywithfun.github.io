@@ -67,4 +67,16 @@
             }
         }
     });
+    Vue.component('words-word', {
+        'template': '<div><audio id="phoneticAudio"></audio><p class="word-content">{{ word.content }}</p><p><template v-if="word.pronunciation && word.pronunciation.uk"><span class="word-pronunciation-type">英</span> <span class="word-pronunciation-phonetic" v-if="word.pronunciation.uk.phonetic">[{{ word.pronunciation.uk.phonetic }}]</span><template v-if="word.pronunciation.uk.audio"><span class="glyphicon glyphicon-volume-up" @click="playAudio(word.content, word.pronunciation.uk.audio)"></span></template></template>&nbsp;&nbsp;&nbsp;<template v-if="word.pronunciation && word.pronunciation.us"><span class="word-pronunciation-type">美</span> <span class="word-pronunciation-phonetic" v-if="word.pronunciation.us.phonetic">[{{ word.pronunciation.us.phonetic }}]</span><template v-if="word.pronunciation.us.audio"><span class="glyphicon glyphicon-volume-up" @click="playAudio(word.content, word.pronunciation.us.audio)"></span></template></template></p><template v-if="word.definition && word.definition.cn"><p><template v-for="(value, key) in word.definition.cn"><span class="word-definition-type">{{ key }}.</span> <span class="word-definition-content">{{ value.join(\';\') }}</span><br></template></p></template><template v-if="word.examples"><blockquote v-for="item in word.examples" class="word-example"><p>{{ item.first }}<em><ins>{{ word.content }}</ins></em>{{ item.last }}</p><footer v-if="item.translation">{{ item.translation }}</footer></blockquote></template></div>',
+        'props': ['word'],
+        'methods': {
+            'playAudio': function (wordContent, audioFile) {
+                $("#phoneticAudio").attr({
+                    "autoplay": "autoplay",
+                    "src": getPhoneticAudioUrl(wordContent, audioFile)
+                });
+            }
+        }
+    });
 })();
