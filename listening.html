@@ -5,60 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="趣学">
+    <meta name="description" content="">
 
-    <title>趣学-听力</title>
+    <title>趣学-听</title>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
-
-    <script src="//cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7,vue@2.3.2"></script>
 </head>
 <body>
-<div class="container" id="listening" v-cloak>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="panel panel-success">
-                <div class="panel-heading text-nowrap">
-                    <a href="index.html">趣学</a> / 听力
-                </div>
-                <div class="panel-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" v-for="pageNumber in pageCount()">
-                                <a role="button" class="btn btn-success btn-lg" :href="wordsUrl(pageNumber)">第{{pageNumber}}组</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+<div id="listening" v-cloak>
+    <navbar-top title="听"></navbar-top>
+    <words-category :items="items"></words-category>
+    <navbar-bottom></navbar-bottom>
 </div>
+<script
+    src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
+<script src="assets/scripts/app.js"></script>
 <script>
-    $.get("assets/listening/listening.json", function (listenings) {
+    $.get("assets/words/listening.json", function (items) {
+        window.linkTo = function (item) {
+            window.location.href = "listening-detail.html?category=" + encodeURIComponent(item.category);
+        };
+
         var vm = new Vue({
             "el": "#listening",
             "data": {
-                "listenings": listenings,
-                "pageSize": 5
-            },
-            "methods": {
-                "recordCount": function () {
-                    return this.listenings ? this.listenings.length : 0;
-                },
-                "pageCount": function () {
-                    return Math.ceil(this.recordCount() / this.pageSize);
-                },
-                "slice": function (pageNumber) {
-                    var recordCount = this.recordCount();
-                    var start = Math.min(this.pageSize * (pageNumber - 1), recordCount);
-                    var end = Math.min(pageNumber * this.pageSize, recordCount);
-                    return this.listenings.slice(start, end);
-                },
-                "wordsUrl": function (pageNumber) {
-                    var words = this.slice(pageNumber);
-                    return "listening-recall.html?ids=" + words.join(",");
-                }
+                "items": items
             }
         });
     });

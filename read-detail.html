@@ -54,15 +54,7 @@
 <script>
     $.get("assets/words/read.json", function (items) {
         var category = getParameter("category");
-        var words = (function (items, category) {
-            for (var index in items) {
-                var item = items[index];
-                if (item.category == category) {
-                    return item.words;
-                }
-            }
-            return [];
-        })(items, category);
+        var words = getWordsByCategory(items, category);
 
         if (words.length == 0) {
             window.location.assign("404.html");

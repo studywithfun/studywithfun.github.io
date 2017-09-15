@@ -1,0 +1,102 @@
+[
+    {
+        "category": "环境与灾害",
+        "words": [
+            {
+                "content": "marine",
+                "items": [
+                    {
+                        "content": "adj. 海洋的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 监督; 管理",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 弹劾; 制裁",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "pesticide",
+                "items": [
+                    {
+                        "content": "n. 农药; 杀虫剂",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 烹饪; 烹调法; 菜肴",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 监督; 管理",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 糕点; 油酥糕点",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "geology",
+                "items": [
+                    {
+                        "content": "n. 地质学; （某一地区的）地质",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 谣言; 传闻",
+                        "answer": false
+                    },
+                    {
+                        "content": " n. 通信者",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj. 编辑的; 编者的; 主笔的",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "战争与军事",
+        "words": []
+    },
+    {
+        "category": "政治",
+        "words": []
+    },
+    {
+        "category": "国际关系",
+        "words": []
+    },
+    {
+        "category": "居家琐事",
+        "words": []
+    },
+    {
+        "category": "购物消费",
+        "words": []
+    },
+    {
+        "category": "交通出行",
+        "words": []
+    },
+    {
+        "category": "外貌描述",
+        "words": []
+    },
+    {
+        "category": "性格特点",
+        "words": []
+    }
+]
