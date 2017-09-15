@@ -52,11 +52,11 @@
     src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
 <script src="assets/scripts/app.js"></script>
 <script>
-    $.get("assets/words/read.json", function (items) {
-        var category = getParameter("category");
-        var words = getWordsByCategory(items, category);
+    $.get("assets/words/read.json", function (categories) {
+        var categoryId = getParameter("categoryId");
+        var items = getItemsByCategoryId(categories, categoryId);
 
-        if (words.length == 0) {
+        if (items.length == 0) {
             window.location.assign("404.html");
             return;
         }
@@ -64,8 +64,8 @@
         var vm = new Vue({
             "el": "#read-detail",
             "data": {
-                "title": ['读', category].join('-'),
-                "words": words,
+                "title": ['读', categoryId].join('-'),
+                "words": items,
                 "index": -1,
                 "word": null
             },

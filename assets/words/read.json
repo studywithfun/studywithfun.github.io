@@ -1,7 +1,7 @@
 [
     {
-        "category": "传媒",
-        "words": [
+        "id": "传媒",
+        "items": [
             "media",
             "rumor",
             "correspondent",
@@ -33,8 +33,8 @@
         ]
     },
     {
-        "category": "医疗",
-        "words": [
+        "id": "医疗",
+        "items": [
             "bacteria",
             "alcohol",
             "radiation",
@@ -67,8 +67,8 @@
         ]
     },
     {
-        "category": "艺术",
-        "words": [
+        "id": "艺术",
+        "items": [
             "inspiration",
             "marvelous",
             "masterpiece",
@@ -102,8 +102,8 @@
         ]
     },
     {
-        "category": "管理",
-        "words": [
+        "id": "管理",
+        "items": [
             "agent",
             "entitle",
             "personnel",
@@ -137,8 +137,8 @@
         ]
     },
     {
-        "category": "法学",
-        "words": [
+        "id": "法学",
+        "items": [
             "commit",
             "witness",
             "legislation",
@@ -170,8 +170,8 @@
         ]
     },
     {
-        "category": "金融",
-        "words": [
+        "id": "金融",
+        "items": [
             "devise",
             "prospect",
             "venture",
@@ -204,8 +204,8 @@
         ]
     },
     {
-        "category": "会计",
-        "words": [
+        "id": "会计",
+        "items": [
             "budget",
             "data",
             "buyout",

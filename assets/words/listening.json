@@ -1,7 +1,7 @@
 [
     {
-        "category": "环境与灾害",
-        "words": [
+        "id": "环境与灾害",
+        "items": [
             {
                 "content": "marine",
                 "items": [
@@ -68,35 +68,35 @@
         ]
     },
     {
-        "category": "战争与军事",
-        "words": []
+        "id": "战争与军事",
+        "items": []
     },
     {
-        "category": "政治",
-        "words": []
+        "id": "政治",
+        "items": []
     },
     {
-        "category": "国际关系",
-        "words": []
+        "id": "国际关系",
+        "items": []
     },
     {
-        "category": "居家琐事",
-        "words": []
+        "id": "居家琐事",
+        "items": []
     },
     {
-        "category": "购物消费",
-        "words": []
+        "id": "购物消费",
+        "items": []
     },
     {
-        "category": "交通出行",
-        "words": []
+        "id": "交通出行",
+        "items": []
     },
     {
-        "category": "外貌描述",
-        "words": []
+        "id": "外貌描述",
+        "items": []
     },
     {
-        "category": "性格特点",
-        "words": []
+        "id": "性格特点",
+        "items": []
     }
 ]

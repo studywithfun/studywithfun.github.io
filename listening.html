@@ -17,22 +17,22 @@
 
 <div id="listening" v-cloak>
     <navbar-top title="听"></navbar-top>
-    <words-category :items="items"></words-category>
+    <words-category :categories="categories"></words-category>
     <navbar-bottom></navbar-bottom>
 </div>
 <script
     src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
 <script src="assets/scripts/app.js"></script>
 <script>
-    $.get("assets/words/listening.json", function (items) {
+    $.get("assets/words/listening.json", function (categories) {
         window.linkTo = function (item) {
-            window.location.href = "listening-detail.html?category=" + encodeURIComponent(item.category);
+            window.location.href = "listening-detail.html?categoryId=" + encodeURIComponent(item.id);
         };
 
         var vm = new Vue({
             "el": "#listening",
             "data": {
-                "items": items
+                "categories": categories
             }
         });
     });
