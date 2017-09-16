@@ -44,7 +44,7 @@
     window.getWordUrl = function (wordContent) {
         return ["assets", "words", wordContent.substring(0, 1), wordContent, wordContent + ".json"].join("/");
     };
-    window.getPhoneticAudioUrl = function (wordContent, audioFile) {
+    window.getWordAudioUrl = function (wordContent, audioFile) {
         return ["assets", "words", wordContent.substring(0, 1), wordContent, audioFile].join("/");
     };
     window.getItemsByCategoryId = function (categories, categoryId) {
@@ -55,6 +55,21 @@
             }
         }
         return [];
+    };
+    window.autoplayWordAudio = function (word) {
+        if (word && word.pronunciation) {
+            if (word.pronunciation.uk && word.pronunciation.uk.audio) {
+                $("<audio></audio>").attr({
+                    "src": getWordAudioUrl(word.content, word.pronunciation.uk.audio),
+                    "autoplay": "autoplay"
+                });
+            } else if (word.pronunciation.us && word.pronunciation.us.audio) {
+                $("<audio></audio>").attr({
+                    "src": getWordAudioUrl(word.content, word.pronunciation.us.audio),
+                    "autoplay": "autoplay"
+                });
+            }
+        }
     };
 
     Vue.component('navbar-top', {
@@ -90,7 +105,7 @@
             'playAudio': function (wordContent, audioFile) {
                 $("#phoneticAudio").attr({
                     "autoplay": "autoplay",
-                    "src": getPhoneticAudioUrl(wordContent, audioFile)
+                    "src": getWordAudioUrl(wordContent, audioFile)
                 });
             }
         }

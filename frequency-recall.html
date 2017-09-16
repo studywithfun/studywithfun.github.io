@@ -134,7 +134,7 @@
                 var r = window.location.search.substr(1).match(reg);
                 return r ? decodeURIComponent(r[2]).split(",") : [];
             })(),
-            "words": []
+            "items": []
         },
         "computed": {
             "percentage": function () {
@@ -155,7 +155,7 @@
         },
         "methods": {
             "getDataUrl": function (wordContent, fileName) {
-                return ["assets", "words", wordContent.substring(0, 1), wordContent, fileName].join("/");
+                return ["assets", "items", wordContent.substring(0, 1), wordContent, fileName].join("/");
             },
             "select": function (index) {
                 var wordContent = this.wordContents[index];
@@ -169,7 +169,7 @@
                         "full": false,
                         "newWord": NWordList.exist(word.content)
                     });
-                    vm.words.push(word);
+                    vm.items.push(word);
                 })
             },
             "next": function () {

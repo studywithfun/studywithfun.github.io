@@ -8,14 +8,14 @@
     <meta name="keywords" content="趣学">
     <meta name="description" content="">
 
-    <title>趣学-读</title>
+    <title>趣学-听</title>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
 </head>
 <body>
 
-<div id="read-detail" v-cloak>
+<div id="listening-detail" v-cloak>
     <navbar-top :title="title"></navbar-top>
     <div class="container">
         <div class="row">
@@ -28,19 +28,34 @@
                 </div>
             </div>
         </div>
-        <template v-if="word">
+
+        <template v-if="selected">
             <div class="row">
                 <div class="col-xs-12">
-                    <words-word :word="word"></words-word>
+                    <div v-bind:class="{hidden: selected.learning}">
+                        <img class="img-responsive img-rounded center-block icon" src="assets/images/horn.jpg"
+                             @click="autoplayWordAudio(selected.word)">
+                        <template v-for="(option, index) in selected.options">
+                            <div class="alert alert-success" :key="Math.random()" role="alert"
+                                 @click="check(option, $event)">
+                                {{ option.content }}
+                            </div>
+                        </template>
+                    </div>
+                    <div v-bind:class="{hidden: !selected.learning}">
+                        <words-word :word="selected.word"></words-word>
+                    </div>
                 </div>
             </div>
         </template>
+
         <div class="row">
             <div class="col-xs-12">
                 <div class="text-center">
                     <template v-if="hasNext">
                         <button type="button" class="btn btn-success" @click="next">继续</button>
                     </template>
+                    <button type="button" class="btn btn-success" @click="selected.learning=true">深学</button>
                     <button type="button" class="btn btn-success" @click="window.history.back();">结束</button>
                 </div>
             </div>
@@ -52,7 +67,7 @@
     src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
 <script src="assets/scripts/app.js"></script>
 <script>
-    $.get("assets/words/read.json", function (categories) {
+    $.get("assets/words/listening.json", function (categories) {
         var categoryId = getParameter("categoryId");
         var items = getItemsByCategoryId(categories, categoryId);
 
@@ -62,12 +77,12 @@
         }
 
         var vm = new Vue({
-            "el": "#read-detail",
+            "el": "#listening-detail",
             "data": {
-                "title": ['读', categoryId].join('-'),
+                "title": ['听', categoryId].join('-'),
                 "items": items,
                 "index": -1,
-                "word": null
+                "selected": null
             },
             "computed": {
                 "length": function () {
@@ -83,11 +98,25 @@
             "methods": {
                 "next": function () {
                     this.index = this.index + 1;
-                    var wordContent = this.items[this.index];
+                    var item = this.items[this.index];
+                    var wordContent = item.content;
                     $.get(getWordUrl(wordContent), function (word) {
-                        vm.word = word;
+                        vm.selected = {
+                            "word": word,
+                            "learning": false,
+                            "options": item.items.sort(function (a, b) {
+                                return Math.random() >= 0.5;
+                            })
+                        };
                         autoplayWordAudio(word);
                     });
+                },
+                "check": function (option, event) {
+                    if (option.answer) {
+                        $(event.target).removeClass("alert-success").addClass("alert-info");
+                    } else {
+                        $(event.target).removeClass("alert-success").addClass("alert-danger");
+                    }
                 }
             }
         });

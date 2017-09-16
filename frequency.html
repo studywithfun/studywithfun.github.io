@@ -62,12 +62,12 @@
         var vm = new Vue({
             "el": "#frequency",
             "data": {
-                "words": words,
+                "items": words,
                 "pageSize": 10
             },
             "methods": {
                 "recordCount": function (type) {
-                    var words = this.words[type];
+                    var words = this.items[type];
                     return words ? words.length : 0;
                 },
                 "pageCount": function (type) {
@@ -77,7 +77,7 @@
                     var recordCount = this.recordCount(type);
                     var start = Math.min(this.pageSize * (pageNumber - 1), recordCount);
                     var end = Math.min(pageNumber * this.pageSize, recordCount);
-                    return this.words[type].slice(start, end);
+                    return this.items[type].slice(start, end);
                 },
                 "wordsUrl": function (type, pageNumber) {
                     var words = this.slice(type, pageNumber);
