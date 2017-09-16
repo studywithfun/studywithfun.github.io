@@ -1,123 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="2;url=https://studywithfun.github.io">
 
-    <title>趣学-词频</title>
+    <base href="https://studywithfun.github.io">
 
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/styles/app.css">
+    <title>404</title>
 
-    <script src="//cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7,vue@2.3.2"></script>
+    <style>
+        body {
+            background: url("/assets/images/404.jpg") repeat;
+        }
+    </style>
+
+    <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-<div class="container" id="frequency" v-cloak>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="panel panel-success">
-                <div class="panel-heading text-nowrap">
-                    <a href="index.html">趣学</a> / <span>词频</span>
-                </div>
-                <div class="panel-body">
-                    <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
-                        <template v-for="(type, index) in ['primary', 'second', 'third']">
-                            <div class="panel panel-default" v-if="words[type]">
-                                <div class="panel-heading" role="tab" :id="'heading' + type">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                           :href="'#collapse' + type" aria-expanded="true"
-                                           :aria-controls="'collapse' + type"
-                                           :class="{collapsed: index > 0}">
-                                            {{ typeLabel(type) }}
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div :id="'collapse' + type" class="panel-collapse collapse" role="tabpanel"
-                                     :aria-labelledby="'heading' + type" :class="{in: index == 0}">
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2"
-                                                 v-for="pageNumber in pageCount(type)">
-                                                <div class="alert alert-success" role="alert"
-                                                     v-html="wordsHtml(type, pageNumber)"
-                                                     @click="wordsUrl(type, pageNumber)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<script>
-    $.get("assets/words/frequency.json", function (words) {
-        var vm = new Vue({
-            "el": "#frequency",
-            "data": {
-                "items": words,
-                "pageSize": 10
-            },
-            "methods": {
-                "recordCount": function (type) {
-                    var words = this.items[type];
-                    return words ? words.length : 0;
-                },
-                "pageCount": function (type) {
-                    return Math.ceil(this.recordCount(type) / this.pageSize);
-                },
-                "slice": function (type, pageNumber) {
-                    var recordCount = this.recordCount(type);
-                    var start = Math.min(this.pageSize * (pageNumber - 1), recordCount);
-                    var end = Math.min(pageNumber * this.pageSize, recordCount);
-                    return this.items[type].slice(start, end);
-                },
-                "wordsUrl": function (type, pageNumber) {
-                    var words = this.slice(type, pageNumber);
-                    window.location.href = "frequency-recall.html?words=" + words.join(",");
-                },
-                "wordsHtml": function (type, pageNumber) {
-                    var words = this.slice(type, pageNumber);
-                    var length = Math.min(3, words.length);
-                    var result = words.slice(0, length);
-                    if (result.length < words.length) {
-                        result.push("...");
-                    }
-                    return result.join("<br>");
-                },
-                "typeLabel": function (type) {
-                    var labels = {
-                        "primary": "高频词汇",
-                        "second": "次高频词汇",
-                        "third": "普通词汇"
-                    };
-                    return labels[type];
-                }
-            }
-        });
-
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-103657912-1', 'auto');
-        ga('send', 'pageview');
-    });
-</script>
 </body>
 </html>
