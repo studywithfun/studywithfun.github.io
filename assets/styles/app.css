@@ -1,25 +1,12 @@
 body {
     padding-top: 70px;
     padding-bottom: 70px;
-}
-
-mark {
-    color: green;
-    font-size: x-large;
+    font-family: "隶书", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 blockquote {
     border-left-color: green;
-}
-
-.glyphicon {
-    font-size: large;
-}
-
-.speech {
-    font-size: 1.2em;
-    white-space: nowrap;
-    color: #3c763d;
+    font-size: 1em;
 }
 
 [v-cloak] {
@@ -44,4 +31,25 @@ h3.song {
 pre.song {
     text-align: center;
     font-size: 1.5em;
+}
+
+.word-content {
+    font-size: 1.6em;
+    font-weight: bolder;
+}
+
+.word-pronunciation-phonetic {
+    color: #B2B2B2;
+}
+
+div.caption {
+    font-size: 1.5em;
+}
+
+.words-category {
+    font-size: 1.5em;
+}
+
+.words-item {
+    font-size: 1em;
 }

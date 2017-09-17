@@ -20,7 +20,6 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <template v-for="(item, index) in slides">
@@ -53,8 +52,7 @@
             <template v-for="item in icons">
                 <div class="col-xs-3">
                     <a class="thumbnail" :href="item.url" :title="item.caption" style="border: 0px">
-                        <img class="img-responsive img-rounded center-block icon" :src="item.image"
-                             :alt="item.caption">
+                        <img :src="item.image" :alt="item.caption" class="img-responsive img-rounded center-block icon">
                         <div class="caption text-center">{{ item.caption }}</div>
                     </a>
                 </div>
