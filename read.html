@@ -16,7 +16,7 @@
 <body>
 
 <div id="read" v-cloak>
-    <navbar-top title="读"></navbar-top>
+    <navbar-top :title="type"></navbar-top>
     <words-category :categories="categories"></words-category>
     <navbar-bottom></navbar-bottom>
 </div>
@@ -24,17 +24,20 @@
     src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
 <script src="assets/scripts/app.js"></script>
 <script>
-    $.get("assets/words/read.json", function (categories) {
-        window.linkTo = function (item) {
-            window.location.href = "read-detail.html?categoryId=" + encodeURIComponent(item.id);
-        };
+    $.get("assets/words/read.json", function (words) {
+        var type = getParameter("type");
 
         var vm = new Vue({
             "el": "#read",
             "data": {
-                "categories": categories
+                "categories": words[type],
+                "type": type
             }
         });
+
+        window.linkTo = function (item) {
+            window.location.href = "read-detail.html?type=" + encodeURIComponent(type) + "&categoryId=" + encodeURIComponent(item.id);
+        };
     });
 
     (function (i, s, o, g, r, a, m) {

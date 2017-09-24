@@ -52,9 +52,10 @@
     src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
 <script src="assets/scripts/app.js"></script>
 <script>
-    $.get("assets/words/read.json", function (categories) {
+    $.get("assets/words/read.json", function (words) {
+        var type = getParameter("type");
         var categoryId = getParameter("categoryId");
-        var items = getItemsByCategoryId(categories, categoryId);
+        var items = getItemsByCategoryId(words[type], categoryId);
 
         if (items.length == 0) {
             window.location.assign("404.html");
@@ -64,8 +65,10 @@
         var vm = new Vue({
             "el": "#read-detail",
             "data": {
-                "title": ['读', categoryId].join('-'),
-                "items": items,
+                "title": [type, categoryId].join('-'),
+                "items": items.sort(function (a, b) {
+                    return Math.random() >= 0.5;
+                }),
                 "index": -1,
                 "word": null
             },
