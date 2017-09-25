@@ -19,13 +19,7 @@
     <navbar-top title="场 景"></navbar-top>
     <div class="container">
         <div class="row">
-            <template v-for="(value, key) in items">
-                <div class="col-xs-6">
-                    <a class="thumbnail" :href="'scene-detail.html?id=' + key" style="border: 0px">
-                        <img :src="value.image" class="img-responsive img-rounded center-block">
-                    </a>
-                </div>
-            </template>
+            <img :src="item.image" class="img-responsive img-rounded center-block">
         </div>
     </div>
     <navbar-bottom></navbar-bottom>
@@ -38,7 +32,10 @@
         var vm = new Vue({
             "el": "#scene",
             "data": {
-                "items": items
+                "item": (function () {
+                    var id = getParameter("id");
+                    return items[id];
+                })()
             }
         });
     });

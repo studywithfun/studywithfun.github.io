@@ -1,38 +1,38 @@
-[
-    {
+{
+    "01": {
         "image": "assets/scenes/01.jpg"
     },
-    {
+    "02": {
         "image": "assets/scenes/02.jpg"
     },
-    {
+    "03": {
         "image": "assets/scenes/03.jpg"
     },
-    {
+    "04": {
         "image": "assets/scenes/04.jpg"
     },
-    {
+    "05": {
         "image": "assets/scenes/05.jpg"
     },
-    {
+    "06": {
         "image": "assets/scenes/06.jpg"
     },
-    {
+    "07": {
         "image": "assets/scenes/07.jpg"
     },
-    {
+    "08": {
         "image": "assets/scenes/08.jpg"
     },
-    {
+    "09": {
         "image": "assets/scenes/09.jpg"
     },
-    {
+    "10": {
         "image": "assets/scenes/10.jpg"
     },
-    {
+    "11": {
         "image": "assets/scenes/11.jpg"
     },
-    {
+    "12": {
         "image": "assets/scenes/12.jpg"
     }
-]
+}

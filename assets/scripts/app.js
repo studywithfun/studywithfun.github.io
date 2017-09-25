@@ -48,7 +48,7 @@
         return ["assets", "words", wordContent.substring(0, 1), wordContent, audioFile].join("/");
     };
     window.getTssAudioUrl = function (text) {
-        return "https://fanyi.baidu.com/gettts?lan=en&spd=3&source=web&text=" + encodeURIComponent(text);
+        return "//fanyi.baidu.com/gettts?lan=en&spd=3&source=web&text=" + encodeURIComponent(text);
     }
     window.getItemsByCategoryId = function (categories, categoryId) {
         for (var index in categories) {
