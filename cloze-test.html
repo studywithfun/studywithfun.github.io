@@ -37,14 +37,14 @@
                             <template v-for="(item, index) in question.text">
                                 {{ item }}
                                 <template v-if="index < question.answers.length">
-                                    <div class="form-group">
-                                        <input name="subject-input" class="form-control"
+                                    <div class="form-group" name="subject-input">
+                                        <input class="form-control"
                                                :size="question.answers[index].length - 2"
                                                v-model.trim="results[index]">
-                                        <em name="subject-answer" class="hidden">
-                                            <ins>{{ question.answers[index] }}</ins>
-                                        </em>
                                     </div>
+                                    <em name="subject-answer" class="hidden">
+                                        <ins>{{ question.answers[index] }}</ins>
+                                    </em>
                                 </template>
                             </template>
                             <audio id="questionAudio"></audio>
@@ -100,6 +100,9 @@
                     this.index = this.index + 1;
                     this.question = questions[this.index];
                     this.results = [];
+                    $("em[name='subject-answer']").addClass("hidden");
+                    $("div[name='subject-input']").removeClass("hidden");
+
                 },
                 "playQuestionAudio": function (question) {
                     var result = [];
@@ -129,7 +132,7 @@
 
                             if (answerText == resultText) {
                                 var answerElement = $("em[name='subject-answer']").get(index);
-                                var inputElement = $("input[name='subject-input']").get(index);
+                                var inputElement = $("div[name='subject-input']").get(index);
                                 $(inputElement).addClass("hidden");
                                 $(answerElement).removeClass("hidden");
                             }
