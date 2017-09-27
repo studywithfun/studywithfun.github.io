@@ -1,0 +1,62 @@
+[
+    {
+        "text": [
+            "Join a",
+            "club to make new friends."
+        ],
+        "answers": [
+            "social"
+        ],
+        "translation": "加入一个社交俱乐部，好交一些新朋友。"
+    },
+    {
+        "text": [
+            "The reduced",
+            "demand is also affecting company"
+        ],
+        "answers": [
+            "consumer",
+            "profits"
+        ],
+        "translation": "消费需求的降低也影响到了公司的利润。"
+    },
+    {
+        "text": [
+            "Many birds are resting on the"
+        ],
+        "answers": [
+            "cable"
+        ],
+        "translation": "许多小鸟正停在电缆上休息。"
+    },
+    {
+        "text": [
+            "The argument about the color of the dress is actually a",
+            "trick."
+        ],
+        "answers": [
+            "visual"
+        ],
+        "translation": "关于裙子颜色的争论实际上是一个视觉游戏。"
+    },
+    {
+        "text": [
+            "The age of",
+            "is upon us!"
+        ],
+        "answers": [
+            "innovation"
+        ],
+        "translation": "我们正在步入一个创新时代。"
+    },
+    {
+        "text": [
+            "I'll need a",
+            "of your blood to see if you're sick."
+        ],
+        "answers": [
+            "sample"
+        ],
+        "translation": "我需要你血液样本来确定你是不是生病了。"
+    }
+]

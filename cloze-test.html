@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="趣学">
+    <meta name="description" content="">
+
+    <title>趣学-写-缺词填空</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/app.css">
+</head>
+<body>
+
+<div id="cloze-test" v-cloak>
+    <navbar-top title="缺词填空"></navbar-top>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                         style="min-width: 4em;" v-bind:style="{width: percentage + '%'}">
+                        {{ index + 1 }} / {{ length }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" v-if="question">
+            <div class="col-xs-12">
+                <form class="form-inline">
+                    <blockquote>
+                        <p>
+                            <template v-for="(item, index) in question.text">
+                                {{ item }}
+                                <template v-if="index < question.answers.length">
+                                    <div class="form-group">
+                                        <input name="subject-input" class="form-control"
+                                               :size="question.answers[index].length - 2"
+                                               v-model.trim="results[index]">
+                                        <em name="subject-answer" class="hidden">
+                                            <ins>{{ question.answers[index] }}</ins>
+                                        </em>
+                                    </div>
+                                </template>
+                            </template>
+                            <audio id="questionAudio"></audio>
+                            <span class="glyphicon glyphicon-volume-up" @click="playQuestionAudio(question)"></span>
+                        </p>
+                        <footer>{{ question.translation }}</footer>
+                    </blockquote>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <template v-if="hasNext">
+                        <button type="button" class="btn btn-success btn-lg" @click="next">继 续</button>
+                    </template>
+                    <button type="button" class="btn btn-success btn-lg" @click="window.history.back();">结 束</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <navbar-bottom></navbar-bottom>
+</div>
+<script
+    src="//cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/bootstrap@3.3.7/dist/js/bootstrap.min.js,npm/vue@2.4.2/dist/vue.min.js"></script>
+<script src="assets/scripts/app.js"></script>
+<script>
+    $.get("assets/words/cloze-test.json", function (questions) {
+        var vm = new Vue({
+            "el": "#cloze-test",
+            "data": {
+                "items": questions.sort(function (a, b) {
+                    return Math.random() >= 0.5;
+                }),
+                "index": -1,
+                "question": null,
+                "results": []
+            },
+            "computed": {
+                "length": function () {
+                    return this.items.length;
+                },
+                "hasNext": function () {
+                    return this.index < this.items.length - 1;
+                },
+                "percentage": function () {
+                    return (100 * (this.index + 1) / this.items.length).toFixed();
+                }
+            },
+            "methods": {
+                "next": function () {
+                    this.index = this.index + 1;
+                    this.question = questions[this.index];
+                    this.results = [];
+                },
+                "playQuestionAudio": function (question) {
+                    var result = [];
+                    for (var index in question.text) {
+                        result.push(question.text[index]);
+                        if (index < question.answers.length) {
+                            result.push(question.answers[index]);
+                        }
+                    }
+                    var text = result.join(" ");
+
+                    $("#questionAudio").attr({
+                        "autoplay": "autoplay",
+                        "src": getTssAudioUrl(text)
+                    });
+                }
+            },
+            "watch": {
+                "results": function () {
+                    for (var index in this.question.answers) {
+                        var answer = this.question.answers[index];
+                        var result = this.results[index];
+
+                        if (answer && result) {
+                            var answerText = answer.toLocaleLowerCase();
+                            var resultText = result.toLocaleLowerCase();
+
+                            if (answerText == resultText) {
+                                var answerElement = $("em[name='subject-answer']").get(index);
+                                var inputElement = $("input[name='subject-input']").get(index);
+                                $(inputElement).addClass("hidden");
+                                $(answerElement).removeClass("hidden");
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        vm.hasNext && vm.next();
+    });
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-103657912-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
