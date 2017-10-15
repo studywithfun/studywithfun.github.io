@@ -56,11 +56,158 @@
                         "answer": false
                     },
                     {
-                        "content": " n. 通信者",
+                        "content": "n. 通信者",
                         "answer": false
                     },
                     {
                         "content": "adj. 编辑的; 编者的; 主笔的",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "acid",
+                "items": [
+                    {
+                        "content": "n.酸.adj酸的",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.致敬;打招呼;打信号示意（计程车等）停下;赞扬（或称颂） 片;学(lake(n.)adec  )…为（尤用于报章等）",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.<英>行李;<美>皮箱",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.公文包;手提包;公事包;手提包",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "resource",
+                "items": [
+                    {
+                        "content": "n.资源",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.长途公共汽车;教练,指导",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.风险投资,风险项目",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.[总称]人员,员工,人事部门",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "erosion",
+                "items": [
+                    {
+                        "content": "n.糜烂;磨损;削弱;减少",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.对虾<俚>愚蠢的人",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 椰子,椰肉",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.馄饨",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "species",
+                "items": [
+                    {
+                        "content": "n.物种,人类",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 开胃品",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.衣柜;衣橱;藏衣室",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.衣服;服装",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "ozone",
+                "items": [
+                    {
+                        "content": "n.臭氧;（口）新鲜空气,能使人兴奋的力量",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.描述,叙述,说法,解释",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. [计]版本;[图情]译文;倒转术",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 弹劾; 制裁",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "emission",
+                "items": [
+                    {
+                        "content": "n.排放;排放物;放射;放射物",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 细菌",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.纽扣孔 vt.强迫听或谈",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.日历,历书,历法",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "reserve",
+                "items": [
+                    {
+                        "content": "n.储备;保留;保护区",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 家具;设备;附属品",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.小屋;棚屋;临时营房;牢房",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.酒精,乙醇",
                         "answer": false
                     }
                 ]
@@ -69,34 +216,1958 @@
     },
     {
         "id": "战争与军事",
-        "items": []
+        "items": [
+            {
+                "content": "front",
+                "items": [
+                    {
+                        "content": "n. 前面; 前部;前线",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 放射;辐射;发光",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.门厅,大厅;休息室；",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.烤箱,烤炉,灶",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "invade",
+                "items": [
+                    {
+                        "content": "vt&vi. 侵入;侵犯;渗透;侵害",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.冰箱;冷藏室;制冰机,冷冻机",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.长途公共汽车;教练,指导；",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.训练,指导,辅导",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "missile",
+                "items": [
+                    {
+                        "content": "n. 导弹; 投射出的地址或武器",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 人行横道,交叉口;横渡 ",
+                        "answer": false
+                    },
+                    {
+                        "content": " n. 直升机",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. [物]辐射;发光;放射物",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "detain",
+                "items": [
+                    {
+                        "content": "vt. 耽搁;拘留,使延迟",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.治疗方法;药物",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.责备;抱怨;责骂",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.气候;风土,地带;风气,气氛",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "disarm",
+                "items": [
+                    {
+                        "content": "vt&vi. 解除武装;使人消除敌意;放下武器",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 烟雾;迷蒙;迷糊;疑惑",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 监督; 管理",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt. 补救;治疗;纠正",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "patrol",
+                "items": [
+                    {
+                        "content": "n.巡逻;逻辑兵",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 雷声;隆隆的响声",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.雪花;雪片",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi. 规定;开药方",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "bomb",
+                "items": [
+                    {
+                        "content": "n.炸弹",
+                        "answer": true
+                    },
+                    {
+                        "content": "adj. 奇迹般的,惊人的",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 画廊,美术馆",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.订房间;保留;预定;预约",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "tactic",
+                "items": [
+                    {
+                        "content": "n.（达到目的）手段;战术;策略",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 公文包;手提包;公事包;手提包",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.终点站;终端;航空站;（电路的）端子",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.代理人,代理商,动因,原因",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "militant",
+                "items": [
+                    {
+                        "content": "adj.斗志昂扬的;好战的;好暴力的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. [总称]人员,员工,人事部门",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt .完成,到达,实行",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.管理,调节",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "arrest",
+                "items": [
+                    {
+                        "content": "vt. 逮捕;拘留; 吸引",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 含酒精的饮料,酒精",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt. 注意到,证明",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.开药,吩咐采用...疗法",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "政治",
-        "items": []
+        "items": [
+            {
+                "content": "hierarchy",
+                "items": [
+                    {
+                        "content": "n.  阶层,等级制度",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 风险投资,风险项目",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj. 不合法的,非法的",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.姜,生姜;姜黄色;精力,活力",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "privilege",
+                "items": [
+                    {
+                        "content": "n. 特权;利益;优惠",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.全部买下,买下（公司或产权）;收购股权",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.发明,策划,想出",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.超过,越出",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "minority",
+                "items": [
+                    {
+                        "content": "n. 少数;少数民族;未成年",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.订房间;保留;预定;预约",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.零售商,零售店;传播的人,到处散布闲话的人",
+                        "answer": false
+                    },
+                    {
+                        "content": "v.弹劾，制裁",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "amend",
+                "items": [
+                    {
+                        "content": "vt.& vi. 修订;改进;修正",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 联营",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.将…围起来;铺铁轨;坐火车旅行;用围栏围",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.给...权利,给...资格",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "reign",
+                "items": [
+                    {
+                        "content": "vi.当政,统治;占主导地位",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.戏弄;欺凌;骑马放牧",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj.黑玉制的或黑玉似的;像炭一般的黑",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.倾盆大雨;（日光的）照射",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "veto",
+                "items": [
+                    {
+                        "content": "n.行使否决权;投反对票",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 审讯,试验",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.法律,法规,立法",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.碎步地走;装腔作势地说",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "constitution",
+                "items": [
+                    {
+                        "content": "n.宪法;构造;章程",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.使有活力,使兴奋;用姜给...调味",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.产量",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.鲤鱼;鲤料（包括金鱼或锦鲤）",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "supervise",
+                "items": [
+                    {
+                        "content": "vt.& vi.监督;指导;管理",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.圆形的小面包或点心;（女子的）圆发髻;酒宴,闹饮;<英>尾巴",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.煎蛋饼,煎蛋卷",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.龙虾,龙虾肉",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "impeach",
+                "items": [
+                    {
+                        "content": "vt.弹劾;指摘",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi. 规定;开药方",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.杏树,杏仁色 adj.杏仁制的,杏仁味的",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "democratic",
+                "items": [
+                    {
+                        "content": "adj.民主的;民主政体的;民主党",
+                        "answer": true
+                    },
+                    {
+                        "content": "adj.美味可口的",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.姜,生姜;姜黄色;精力,活力",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 弹劾; 制裁",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "国际关系",
-        "items": []
+        "items": [
+            {
+                "content": "asylum",
+                "items": [
+                    {
+                        "content": "n.避难所;疯人院",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 婴儿的全套服装",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 使住临时营房;驻扎",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.终点站;终端;航空站;（电路的）端子",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "coalition",
+                "items": [
+                    {
+                        "content": "n. 联合;联盟;结合",
+                        "answer": true
+                    },
+                    {
+                        "content": "adj.奇迹般的,惊人的",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为雾笼罩;朦胧;照片（模糊）",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.条约,协定",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "domain",
+                "items": [
+                    {
+                        "content": "n.（活动、知识的）范围;领域;领土;势力范围",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.&vi.发出隆隆声;轰隆隆的快速移动;使快速移动;怒喝",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.致敬;打招呼;打信号示意（计程车等）停下;赞扬（或称颂） 片;学(lake(n.)adec  )...为（尤用于报章等）",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. [物]辐射;发光;放射物",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "consultation",
+                "items": [
+                    {
+                        "content": "n.咨询;磋商;[临床] 会诊;讨论会",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 鲤鱼;鲤料（包括金鱼或锦鲤）",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.描述,叙述,说法,解释",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 弹劾; 制裁",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "refugee",
+                "items": [
+                    {
+                        "content": "n.避难者;难民",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 血管中层;浊塞音;中脉",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.通信者(报纸、杂志的)通讯员;记者",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.联营",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "mediator",
+                "items": [
+                    {
+                        "content": "n.调解人;中介物",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.  画廊,美术馆",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.[总称]人员,员工,人事部门",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为了支持或抵制某项特定目标游说",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "panel",
+                "items": [
+                    {
+                        "content": "n.讨论小组;仪表板,面,板",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 补救;治疗;赔偿",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.订房间;保留;预定;预约",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.代理人,代理商,动因,原因",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "ambassador",
+                "items": [
+                    {
+                        "content": "n.（特命全权）大使;特使;代表",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. [物]辐射;发光;放射物",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.龙虾,龙虾肉",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.预算 v. 编预算,作安排",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "sovereign",
+                "items": [
+                    {
+                        "content": "adj.至高无上的;具有独立主权的;由最高统治权的",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt. 注意到,证明",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为雾笼罩;朦胧;照片（模糊）",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj.不合法的,非法的",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "居家琐事",
-        "items": []
+        "items": [
+            {
+                "content": "install",
+                "items": [
+                    {
+                        "content": "vt.安装;放置;使就职",
+                        "answer": true
+                    },
+                    {
+                        "content": "v.使住临时营房;驻扎",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt. 管理,调节",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.数据,资料",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "parcel",
+                "items": [
+                    {
+                        "content": "n.包袱;一片;一块",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 烹饪; 烹调法; 菜肴",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 监督; 管理",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.发明,策划,想出",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "plumber",
+                "items": [
+                    {
+                        "content": "n.管道工,水管工人",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 姜,生姜;姜黄色;精力,活力",
+                        "answer": false
+                    },
+                    {
+                        "content": " vt.给（窗户或房间）装上帘子;掩蔽",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.完成,到达,实行",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "furnished",
+                "items": [
+                    {
+                        "content": "adj.有家具的",
+                        "answer": true
+                    },
+                    {
+                        "content": "adj.黑玉制的或黑玉似的;像炭一般的黑",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.开药,吩咐采用...疗法",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.圆形的小面包或点心;（女子的）圆发髻;酒宴,闹饮;<英>尾巴",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "leak",
+                "items": [
+                    {
+                        "content": "vi.漏出;泄露",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.使有活力,使兴奋;用姜给...调味",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.&vi.发出隆隆声;轰隆隆的快速移动;使快速移动;怒喝",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.法律,法规,立法",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "cupboard",
+                "items": [
+                    {
+                        "content": "n.橱柜;碗橱;衣柜;壁橱",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 代理人,代理商,动因,原因",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.戏弄;欺凌;骑马放牧",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.风险投资,风险项目",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "pipe",
+                "items": [
+                    {
+                        "content": "n.管子;导管;烟斗;笛",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.审讯,试验",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.手帕;方巾,围巾",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "laundry",
+                "items": [
+                    {
+                        "content": "n.洗衣店;送洗的衣物;洗衣;洗衣房",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 监督; 管理",
+                        "answer": false
+                    },
+                    {
+                        "content": "n./vt.补救,医治,治疗",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "basement",
+                "items": [
+                    {
+                        "content": "n.【建筑学】地下室;根基",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 鲤鱼;鲤料（包括金鱼或锦鲤）",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 画廊;美术馆",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj. 美味可口的",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "balcony",
+                "items": [
+                    {
+                        "content": "n.阳台;剧院楼厅",
+                        "answer": true
+                    },
+                    {
+                        "content": "vi. 规定;开药方",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.杏树,杏仁色 adj.杏仁制的,杏仁味的",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj.奇迹般的,惊人的",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "购物消费",
-        "items": []
+        "items": [
+            {
+                "content": "bargain",
+                "items": [
+                    {
+                        "content": "n.交易;便宜货;契约",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt. 合适;证明;判定",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.倾盆大雨;（日光的）照射",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 零售商,零售店;传播的人,到处散布闲话的人",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "discount",
+                "items": [
+                    {
+                        "content": "vt.打折扣,不全信,不怀疑地看待",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 龙虾,龙虾肉",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.将...围起来;铺铁轨;坐火车旅行;用围栏围",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj.黑玉制的或黑玉似的;像炭一般的黑",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "steak",
+                "items": [
+                    {
+                        "content": "n.牛排;肉块;鱼块",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 煎蛋饼,煎蛋卷",
+                        "answer": false
+                    },
+                    {
+                        "content": " n. 公文包;手提包;公事包;手提包",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.含酒精的饮料,酒精",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "dessert",
+                "items": [
+                    {
+                        "content": "n.甜点",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. <英>行李;<美>皮箱",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.婴儿的全套服装",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.致敬;打招呼;打信号示意（计程车等）停下;赞扬（或称颂） 片;学【lake(n.)adec  )...为（尤用于报章等）",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "grocery",
+                "items": [
+                    {
+                        "content": "n.食品杂货商;杂货店",
+                        "answer": true
+                    },
+                    {
+                        "content": "adj.不合法的,非法的",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.切碎,剁碎;委婉的说",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 弹劾; 制裁",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "mall",
+                "items": [
+                    {
+                        "content": "n.购物中心",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.使有活力,使兴奋;用姜给...调味",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.终点站;终端;航空站;（电路的）端子",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.倾盆大雨;（日光的）照射",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "order",
+                "items": [
+                    {
+                        "content": "v.点菜",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 淋浴;阵雨",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj. 有家具的",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.戏弄;欺凌;骑马放牧",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "receipt",
+                "items": [
+                    {
+                        "content": "n.收据",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 牛排;肉块;鱼块",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 开襟羊毛衫",
+                        "answer": false
+                    },
+                    {
+                        "content": "n./vt.补救,医治,治疗",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "catalog",
+                "items": [
+                    {
+                        "content": "n.商品目录",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.皱纹;褶皱;窍门;转折,改变",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 马尾辫",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.给...权利,给...资格",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "complaint",
+                "items": [
+                    {
+                        "content": "n.投诉",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 收据",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 阳台;剧院楼厅",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为雾笼罩;朦胧;照片（模糊）",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "pudding",
+                "items": [
+                    {
+                        "content": "n.（一道）甜食;布丁",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.发明,策划,想出",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.使有活力,使兴奋;用姜给...调味",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.手帕;方巾,围巾",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "airsick",
+                "items": [
+                    {
+                        "content": "adj.晕机的;患航空病的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "v.使住临时营房;驻扎",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.合适;证明;判定",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "交通出行",
-        "items": []
+        "items": [
+            {
+                "content": "platform",
+                "items": [
+                    {
+                        "content": "n.站台;平台;讲台",
+                        "answer": true
+                    },
+                    {
+                        "content": "vi.为雾笼罩;朦胧;照片（模糊）",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.射击;使惊飞",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.鲤鱼;鲤料（包括金鱼或锦鲤）",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "carriage",
+                "items": [
+                    {
+                        "content": "n.四轮马车;客车厢",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 产量",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. [物]辐射;发光;放射物",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt. 规定;开处方",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "shower",
+                "items": [
+                    {
+                        "content": "n.淋浴;阵雨",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.条约,协定",
+                        "answer": false
+                    },
+                    {
+                        "content": " v.监督,管理",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 补救;治疗;赔偿",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "airline",
+                "items": [
+                    {
+                        "content": "n.航空公司;航空系统,（飞机的）航线",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.切碎,剁碎;委婉的说",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt. 把...放在货盘上,码垛堆积,用货盘装运",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.婴儿的全套服装",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "airport",
+                "items": [
+                    {
+                        "content": "n.机场",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 站台;平台;讲台",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.    四轮马车;客车厢",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.使有活力,使兴奋;用姜给...调味",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "board",
+                "items": [
+                    {
+                        "content": "v.登机",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 机场",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.    拖鞋;便鞋",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.)条约,协定",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "cloudy",
+                "items": [
+                    {
+                        "content": "adj.阴天",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 观光;游览",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.    （下巴上的）胡须",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj. 美味可口的",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "flight",
+                "items": [
+                    {
+                        "content": "n.航班",
+                        "answer": true
+                    },
+                    {
+                        "content": "v.登机",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.   酒窝,涟漪,浅凹",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.超过,越出",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "landscape",
+                "items": [
+                    {
+                        "content": "n.风景",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.甜点",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 阳台;剧院楼厅",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.开药,吩咐采用...疗法",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "sightseeing",
+                "items": [
+                    {
+                        "content": "n.观光;游览",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为了支持或抵制某项特定目标游说",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.给（窗户或房间）装上帘子;掩蔽",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "外貌描述",
-        "items": []
+        "items": [
+            {
+                "content": "moustache",
+                "items": [
+                    {
+                        "content": "n.小胡子;哺乳动物的）触须",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.预算 v. 编预算,作安排",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.终点站;终端;航空站;（电路的）端子",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.&vi.发出隆隆声;轰隆隆的快速移动;使快速移动;怒喝",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "ponytail",
+                "items": [
+                    {
+                        "content": "n.马尾辫",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.手帕;方巾,围巾",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.倾盆大雨;（日光的）照射",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.碎步地走;装腔作势地说",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "plump",
+                "items": [
+                    {
+                        "content": "adj.丰满的;颇胖的",
+                        "answer": true
+                    },
+                    {
+                        "content": "adj.美味可口的",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 补救;治疗;赔偿",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.戏弄;欺凌;骑马放牧",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "slipper",
+                "items": [
+                    {
+                        "content": "n.拖鞋;便鞋",
+                        "answer": true
+                    },
+                    {
+                        "content": "n./vt.补救,医治,治疗",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.使有活力,使兴奋;用姜给...调味",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为雾笼罩;朦胧;照片（模糊）",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "wrinkle",
+                "items": [
+                    {
+                        "content": "n.皱纹;褶皱;窍门;转折,改变",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 零售商,零售店;传播的人,到处散布闲话的人",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.给...权利,给...资格",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.倾盆大雨;（日光的）照射",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "cardigan",
+                "items": [
+                    {
+                        "content": "n.开襟羊毛衫",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.超过,越出",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 弹劾; 制裁",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "beard",
+                "items": [
+                    {
+                        "content": "n.（下巴上的）胡须",
+                        "answer": true
+                    },
+                    {
+                        "content": "adj.黑玉制的或黑玉似的;像炭一般的黑",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.姜,生姜;姜黄色;精力,活力",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.煎蛋饼,煎蛋卷",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "dimple",
+                "items": [
+                    {
+                        "content": "n.酒窝,涟漪,浅凹",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 终点站;终端;航空站;（电路的）端子",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 监督; 管理",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj.黑玉制的或黑玉似的;像炭一般的黑",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "loose",
+                "items": [
+                    {
+                        "content": "adj.宽松的;（指言行的）不严谨的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.碎步地走;装腔作势地说",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.)杏树,杏仁色 adj.杏仁制的,杏仁味的",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "slender",
+                "items": [
+                    {
+                        "content": "adj.苗条的;修长的;纤细的,微薄的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 审讯,试验",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.)数据,资料",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.全部买下,买下（公司或产权）;收购股权",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "性格特点",
-        "items": []
+        "items": [
+            {
+                "content": "competent",
+                "items": [
+                    {
+                        "content": "adj. 有能力的;能干的;胜任的;合格的",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.把...放在货盘上,码垛堆积,用货盘装运",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.圆形的小面包或点心;（女子的）圆发髻;酒宴,闹饮;<英>尾巴",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.<英>行李;<美>皮箱",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "earnest",
+                "items": [
+                    {
+                        "content": "adj.热心的,真诚的,认真的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 倾盆大雨;（日光的）照射",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.&vi.发出隆隆声;轰隆隆的快速移动;使快速移动;怒喝",
+                        "answer": false
+                    },
+                    {
+                        "content": "v.使住临时营房;驻扎",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "constructive",
+                "items": [
+                    {
+                        "content": "adj.建设性的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 手帕;方巾,围巾",
+                        "answer": false
+                    },
+                    {
+                        "content": " vt.致敬;打招呼;打信号示意（计程车等）停下;赞扬（或称颂） 片;学【lake(n.)adec  )...为（尤用于报章等）",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为了支持或抵制某项特定目标游说",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "dedicated",
+                "items": [
+                    {
+                        "content": "ad.专心致志的",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt. 规定;开处方",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.婴儿的全套服装",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.射击;使惊飞",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "easygoing",
+                "items": [
+                    {
+                        "content": "adj.脾气随和的;悠闲的;逍遥自在的;不严肃的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 杏树,杏仁色 adj.杏仁制的,杏仁味的",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.代理人,代理商,动因,原因",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.切碎,剁碎;委婉的说",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "logical",
+                "items": [
+                    {
+                        "content": "adj.符合逻辑的,合情合理的,推理的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.给（窗户或房间）装上帘子;掩蔽",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.给...权利,给...资格",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "frank",
+                "items": [
+                    {
+                        "content": "adj.坦白的,直率的",
+                        "answer": true
+                    },
+                    {
+                        "content": "vi.碎步地走;装腔作势地说",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj. 不合法的,非法的",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为雾笼罩;朦胧;照片（模糊）",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "humble",
+                "items": [
+                    {
+                        "content": "adj.谦逊的;卑微的,低声下气的",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.&vi.发出隆隆声;轰隆隆的快速移动;使快速移动;怒喝",
+                        "answer": false
+                    },
+                    {
+                        "content": "vi.为了支持或抵制某项特定目标游说",
+                        "answer": false
+                    },
+                    {
+                        "content": "v. 弹劾; 制裁",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "objective",
+                "items": [
+                    {
+                        "content": "adj.客观的;真实的,宾语的",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. [总称]人员,员工,人事部门",
+                        "answer": false
+                    },
+                    {
+                        "content": "adj. 美味可口的",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt. 规定;开处方",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "trustworthy",
+                "items": [
+                    {
+                        "content": "adj.值得信赖的;可靠的",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.开药,吩咐采用...疗法",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.将...围起来;铺铁轨;坐火车旅行;用围栏围",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.给（窗户或房间）装上帘子;掩蔽",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "职业身份",
+        "items": [
+            {
+                "content": "accountant",
+                "items": [
+                    {
+                        "content": "n.会计人员;会计师",
+                        "answer": true
+                    },
+                    {
+                        "content": "n.<英>行李;<美>皮箱",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt. 合适;证明;判定",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.切碎,剁碎;委婉的说",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "priest",
+                "items": [
+                    {
+                        "content": "n. 神父;教士",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 零售商,零售店;传播的人,到处散布闲话的人",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.条约,协定",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.审讯,试验",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "merchant",
+                "items": [
+                    {
+                        "content": "adj.商人,批发商",
+                        "answer": true
+                    },
+                    {
+                        "content": " vt完成,到达,实行",
+                        "answer": false
+                    },
+                    {
+                        "content": " v.监督,管理",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.姜,生姜;姜黄色;精力,活力",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "technician",
+                "items": [
+                    {
+                        "content": "n.技师;技术员",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt. 超过,越出",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.倾盆大雨;（日光的）照射",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.把...放在货盘上,码垛堆积,用货盘装运",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "engineer",
+                "items": [
+                    {
+                        "content": "n.工程师;技师;火车司机;技工",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 数据,资料",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.联营",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.产量",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "secretary",
+                "items": [
+                    {
+                        "content": "n.秘书;书记;部长;大臣",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 全部买下,买下（公司或产权）;收购股权",
+                        "answer": false
+                    },
+                    {
+                        "content": "vt.将...围起来;铺铁轨;坐火车旅行;用围栏围",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "judge",
+                "items": [
+                    {
+                        "content": "vt.判断;审判;裁决",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 法律,法规,立法",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.预算 v. 编预算,作安排",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.手帕;方巾,围巾",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "housekeeper",
+                "items": [
+                    {
+                        "content": "n.女管家;主妇",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.管理,调节",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.风险投资,风险项目",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.[总称]人员,员工,人事部门",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "receptionist",
+                "items": [
+                    {
+                        "content": "n.接待员;传达员",
+                        "answer": true
+                    },
+                    {
+                        "content": "n. 自由; 民主",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.订房间;保留;预定;预约",
+                        "answer": false
+                    },
+                    {
+                        "content": "n.公文包;手提包;公事包;手提包",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "content": "dentist",
+                "items": [
+                    {
+                        "content": "n.牙科医生",
+                        "answer": true
+                    },
+                    {
+                        "content": "vt.给...权利,给...资格",
+                        "answer": false
+                    },
+                    {
+                        "content": "n./vt.补救,医治,治疗",
+                        "answer": false
+                    },
+                    {
+                        "content": "n. 含酒精的饮料,酒精",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
     }
 ]
