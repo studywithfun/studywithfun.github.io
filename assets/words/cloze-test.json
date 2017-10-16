@@ -41,22 +41,305 @@
     },
     {
         "text": [
-            "The age of",
-            "is upon us!"
+            "The",
+            "hydrocarbon is called hexane ."
         ],
         "answers": [
-            "innovation"
+            "petroleum"
         ],
-        "translation": "我们正在步入一个创新时代。"
+        "translation": "己烷是一种石油碳氢化合物。"
     },
     {
         "text": [
-            "I'll need a",
-            "of your blood to see if you're sick."
+            "We stopped at the filling station because we needed"
         ],
         "answers": [
-            "sample"
+            "gasoline"
         ],
-        "translation": "我需要你血液样本来确定你是不是生病了。"
+        "translation": "在加油站停下，因我们需要加油。"
+    },
+    {
+        "text": [
+            "",
+            "was the \"in\" thing."
+        ],
+        "answers": [
+            "Breeding"
+        ],
+        "translation": "品种是一个十分重要的问题。"
+    },
+    {
+        "text": [
+            "By such deeds, you soil the very name the ",
+            "have bequeathed us."
+        ],
+        "answers": [
+            "ancestor"
+        ],
+        "translation": "你这样做，玷污了祖宗们留给我们的名声。"
+    },
+    {
+        "text": [
+            "Most",
+            "plants can live only in the photic zone ."
+        ],
+        "answers": [
+            "marine"
+        ],
+        "translation": "海洋植物多半只能生活在透光层里。"
+    },
+    {
+        "text": [
+            "The photosynthetic responses determine the ",
+            "of p. rubens and p. mariana in the climax forest."
+        ],
+        "answers": [
+            "habitat"
+        ],
+        "translation": "光合反应决定红云杉和黑云杉在顶极林中的生态环境。"
+    },
+    {
+        "text": [
+            "He",
+            "a large fortune from his father."
+        ],
+        "answers": [
+            "inherited"
+        ],
+        "translation": "他从父亲那里继承了一大笔财产。"
+    },
+    {
+        "text": [
+            "He was one of a class rapidly becoming ",
+            " in wessex."
+        ],
+        "answers": [
+            "extinct"
+        ],
+        "translation": "在维塞可斯那块地方上，他是属于眼看就要完全绝迹了那种行业中的一员。"
+    },
+    {
+        "text": [
+            "Most",
+            "act by producing a protein."
+        ],
+        "answers": [
+            "genes"
+        ],
+        "translation": "绝大多数基因通过制造蛋白质的过程而起作用。"
+    },
+    {
+        "text": [
+            "The",
+            "was crying for help , as a black bird at a not too far distance was preparing to attack him"
+        ],
+        "answers": [
+            "inset"
+        ],
+        "translation": "这只昆虫在喊救命，因为一只黑鸟在不远处正准备捕捉他。"
+    },
+    {
+        "text": [
+            "A fiery steed is not trained in a courtyard , nor does a pine grow sturdy in a"
+        ],
+        "answers": [
+            "greenhouse"
+        ],
+        "translation": "院子里练不出千里马，温室里长不出万年松。"
+    },
+    {
+        "text": [
+            "Ford has a more competitive"
+        ],
+        "answers": [
+            "environment"
+        ],
+        "translation": "福特公司具有一个较有竞争力的环境。"
+    },
+    {
+        "text": [
+            "Air",
+            "is a global problem."
+        ],
+        "answers": [
+            "pollution"
+        ],
+        "translation": "空气污染是全球性的问题。"
+    },
+    {
+        "text": [
+            "In general, the annual",
+            "in these regions is less than the annual water loss by evaporation ."
+        ],
+        "answers": [
+            "rainfall"
+        ],
+        "translation": "总的来说，这些地区的年降雨量比一年内由于蒸腾而失去的水分要少。"
+    },
+    {
+        "text": [
+            "Government procurement of ",
+            "paper stimulates recycling . "
+        ],
+        "answers": [
+            "recycled"
+        ],
+        "translation": "政府收购再生纸，可以促进回收利用。"
+    },
+    {
+        "text": [
+            "Eggs and bacon are both high in"
+        ],
+        "answers": [
+            "Protein"
+        ],
+        "translation": "鸡蛋和培根都有很高的蛋白质含量。"
+    },
+    {
+        "text": [
+            "I love to eat",
+            "when I drink coffee."
+        ],
+        "answers": [
+            "Biscuit"
+        ],
+        "translation": "我喝咖啡的时候喜欢吃点饼干。"
+    },
+    {
+        "text": [
+            "Don’t drive so fast. The police have a speed"
+        ],
+        "answers": [
+            "Detector"
+        ],
+        "translation": "不要开得太快，警察有测速器。"
+    },
+    {
+        "text": [
+            "this APP and you can enjoy new function."
+        ],
+        "answers": [
+            "Update"
+        ],
+        "translation": "更新这款软件，就能使用新功能。"
+    },
+    {
+        "text": [
+            "If you",
+            "a crime, the police will send you to prison."
+        ],
+        "answers": [
+            "Commit"
+        ],
+        "translation": "如果你犯罪了，警察机会把你送进监狱。"
+    },
+    {
+        "text": [
+            "The speeding driver faces a",
+            "of $1000."
+        ],
+        "answers": [
+            "Penalty"
+        ],
+        "translation": "这个超速的司机面临1000美元的罚款。"
+    },
+    {
+        "text": [
+            "He",
+            "a clever invention to cool his hot noodles."
+        ],
+        "answers": [
+            "Contrive"
+        ],
+        "translation": "他搞出了一个聪明的小发明用来吹凉很烫的面。"
+    },
+    {
+        "text": [
+            "Every",
+            "is the result of a lot of experiments."
+        ],
+        "answers": [
+            "Scientific invention"
+        ],
+        "translation": "每一项科学发明都是大量实验的结果。"
+    },
+    {
+        "text": [
+            "Drinking too much",
+            "gave the man a headache."
+        ],
+        "answers": [
+            "Alcohol"
+        ],
+        "translation": "喝了太多酒，男人很头疼。"
+    },
+    {
+        "text": [
+            "A sponges is quickly",
+            "with fluids."
+        ],
+        "answers": [
+            "Saturated"
+        ],
+        "translation": "海绵会很快背液体浸湿。"
+    },
+    {
+        "text": [
+            "I calculate the",
+            "of my food before I eat."
+        ],
+        "answers": [
+            "Calorie"
+        ],
+        "translation": "在我吃东西之前，我需要计算每种食物所含的卡路里。。"
+    },
+    {
+        "text": [
+            "The child was given special facility for the",
+            "of oxygen."
+        ],
+        "answers": [
+            "Intake"
+        ],
+        "translation": "他们给这个孩子一个特殊的吸氧设备。"
+    },
+    {
+        "text": [
+            "The wood is treated with",
+            "to prevent decay."
+        ],
+        "answers": [
+            "Preservative"
+        ],
+        "translation": "这块木头用防腐剂处理过以防止腐烂."
+    },
+    {
+        "text": [
+            "Fruits such as oranges and grapes are rich in ",
+            " C."
+        ],
+        "answers": [
+            "Vitamin"
+        ],
+        "translation": "橙子、葡萄等水果都富含维他命C。"
+    },
+    {
+        "text": [
+            "such as rice, are the first crops to be sow-n."
+        ],
+        "answers": [
+            "Cereal"
+        ],
+        "translation": "谷物例如水稻，是人类播种的第一批农作物。 "
+    },
+    {
+        "text": [
+            "Hands should be washed",
+            "soap to improve hygie-ne"
+        ],
+        "answers": [
+            "Hygiene"
+        ],
+        "translation": "为提高卫生，洗手的时候应该用肥皂。 "
     }
 ]
